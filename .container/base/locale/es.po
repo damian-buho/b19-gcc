@@ -1,0 +1,102 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+# Copyright (C) 2026 b19
+#
+# SPDX-License-Identifier: MIT
+msgid ""
+msgstr ""
+"Project-Id-Version: b19-gcc\n"
+"Report-Msgid-Bugs-To: i18n@b19.dev\n"
+"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"PO-Revision-Date: 2026-03-22 00:00+0000\n"
+"Last-Translator: b19 team\n"
+"Language-Team: Spanish\n"
+"Language: es\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .container/base/tools.d/setup-build:72
+msgid "sccache without %s causes build races, falling back to ccache"
+msgstr "sccache sin %s provoca conflictos de compilación, cambiando a ccache"
+
+#: .container/base/tools.d/setup-build:81
+msgid "Create sccache cache directory"
+msgstr "Crear directorio de caché sccache"
+
+#: .container/base/tools.d/setup-build:84
+msgid "Compile cache: sccache + Redis (%s)"
+msgstr "Caché de compilación: sccache + Redis (%s)"
+
+#: .container/base/tools.d/setup-build:89
+msgid "Create ccache cache directory"
+msgstr "Crear directorio de caché ccache"
+
+#: .container/base/tools.d/setup-build:95
+msgid "Compile cache: ccache + Redis (%s)"
+msgstr "Caché de compilación: ccache + Redis (%s)"
+
+#: .container/base/tools.d/setup-build:97
+msgid "Compile cache: ccache (%s)"
+msgstr "Caché de compilación: ccache (%s)"
+
+#: .container/base/tools.d/setup-build:104
+msgid "Compile cache: %s"
+msgstr "Caché de compilación: %s"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:4
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:5
+msgid "stats: %s"
+msgstr "estadísticas: %s"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:6
+msgid "Compile cache was disabled (%s), no stats"
+msgstr "Caché de compilación desactivada (%s), sin estadísticas"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:7
+#, fuzzy
+msgid "Unknown compile cache mode: %s"
+msgstr "Caché de compilación: %s"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:7
+msgid "Set gcc-%s as default"
+msgstr "Establecer gcc-%s como predeterminado"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:12
+msgid "GCC %s set as default"
+msgstr "GCC %s establecido como predeterminado"
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:9
+msgid "Extract %s"
+msgstr "Extraer %s"
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:15
+msgid "Install sccache"
+msgstr "Instalar sccache"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:9
+msgid "Render %s"
+msgstr "Generar %s"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:12
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:15
+msgid "GCC templates processed for series %s"
+msgstr "Plantillas GCC procesadas para la serie %s"
+
+#~ msgid "Configure"
+#~ msgstr "Configurar"
+
+#~ msgid "Build"
+#~ msgstr "Compilar"
+
+#~ msgid "Install"
+#~ msgstr "Instalar"
+
+#~ msgid "Cleanup .a"
+#~ msgstr "Limpiar archivos .a"
+
+#~ msgid "Cleanup .o"
+#~ msgstr "Limpiar archivos .o"

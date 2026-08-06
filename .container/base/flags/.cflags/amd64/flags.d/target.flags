@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+-m128bit-long-double                   # Use 128-bit long double
+-m64                                   # Generate 64-bit code
+-mabm                                  # Enable Advanced Bit Manipulation instructions
+-madx                                  # Enable ADX instructions for multiply-add
+-malign-stringops                      # Align string operations for better performance
+-mavx                                  # Enable Advanced Vector Extensions
+-mavx2                                 # Enable AVX2 instructions
+-mbmi                                  # Enable Bit Manipulation Instructions
+-mbmi2                                 # Enable BMI2 instructions
+-mcrc32                                # Enable CRC32 instructions
+-mcx16                                 # Enable CMPXCHG16B instruction
+-mdaz-ftz                              # Disable AZ and FTZ flags for better precision
+-mdirect-extern-access                 # Enable direct external access
+-mf16c                                 # Enable F16C instructions for half-precision float
+-mfancy-math-387                       # Enable fancy math operations on x87
+-mfma                                  # Enable FMA instructions (Fused Multiply-Add)
+-mfp-ret-in-387                        # Return floating point values in x87 registers
+-mfsgsbase                             # Enable FSGSBASE instructions
+-mfxsr                                 # Enable FXSAVE and FXRSTOR instructions
+-mglibc                                # Use glibc optimizations
+-mhard-float                           # Use hardware floating point
+-mhle                                  # Enable Hardware Lock Elision
+-mieee-fp                              # Enable IEEE floating point conformance
+-mlzcnt                                # Enable LZCNT instruction for leading zero count
+-mmmx                                  # Enable MMX instructions
+-mmovbe                                # Enable MOVBE instruction for byte swapping
+-mmwaitx                               # Enable MWAITX instruction
+-mpclmul                               # Enable PCLMUL instructions for carry-less multiplication
+-mpopcnt                               # Enable POPCNT instruction for population count
+-mprfchw                               # Enable PREFETCHW instruction
+-mrdrnd                                # Enable RDRAND instruction for random numbers
+-mred-zone                             # Enable red zone for function prologues
+-msahf                                 # Enable SAHF instruction
+-msse                                  # Enable SSE instructions
+-msse2                                 # Enable SSE2 instructions
+-msse3                                 # Enable SSE3 instructions
+-msse4                                 # Enable SSE4 instructions
+-msse4.1                               # Enable SSE4.1 instructions
+-msse4.2                               # Enable SSE4.2 instructions
+-mssse3                                # Enable SSSE3 instructions
+-mstv                                  # Enable STV instruction
+-mtls-direct-seg-refs                  # Enable direct TLS segment references
+-mvzeroupper                           # Enable VZEROUPPER instruction
+-mxsave                                # Enable XSAVE instruction
+-mxsaveopt                             # Enable XSAVEOPT instruction

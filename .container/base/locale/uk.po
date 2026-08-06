@@ -1,0 +1,103 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+# Copyright (C) 2026 b19
+#
+# SPDX-License-Identifier: MIT
+msgid ""
+msgstr ""
+"Project-Id-Version: b19-gcc\n"
+"Report-Msgid-Bugs-To: i18n@b19.dev\n"
+"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"PO-Revision-Date: 2026-03-22 00:00+0000\n"
+"Last-Translator: b19 team\n"
+"Language-Team: Ukrainian\n"
+"Language: uk\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+#: .container/base/tools.d/setup-build:72
+msgid "sccache without %s causes build races, falling back to ccache"
+msgstr "sccache без %s спричиняє конфлікти збірки, перемикаюсь на ccache"
+
+#: .container/base/tools.d/setup-build:81
+msgid "Create sccache cache directory"
+msgstr "Створити директорію кешу sccache"
+
+#: .container/base/tools.d/setup-build:84
+msgid "Compile cache: sccache + Redis (%s)"
+msgstr "Кеш компіляції: sccache + Redis (%s)"
+
+#: .container/base/tools.d/setup-build:89
+msgid "Create ccache cache directory"
+msgstr "Створити директорію кешу ccache"
+
+#: .container/base/tools.d/setup-build:95
+msgid "Compile cache: ccache + Redis (%s)"
+msgstr "Кеш компіляції: ccache + Redis (%s)"
+
+#: .container/base/tools.d/setup-build:97
+msgid "Compile cache: ccache (%s)"
+msgstr "Кеш компіляції: ccache (%s)"
+
+#: .container/base/tools.d/setup-build:104
+msgid "Compile cache: %s"
+msgstr "Кеш компіляції: %s"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:4
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:5
+msgid "stats: %s"
+msgstr "статистика: %s"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:6
+msgid "Compile cache was disabled (%s), no stats"
+msgstr "Кеш компіляції вимкнений (%s), статистики немає"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:7
+#, fuzzy
+msgid "Unknown compile cache mode: %s"
+msgstr "Кеш компіляції: %s"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:7
+msgid "Set gcc-%s as default"
+msgstr "Встановити gcc-%s за замовчуванням"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:12
+msgid "GCC %s set as default"
+msgstr "GCC %s встановлено за замовчуванням"
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:9
+msgid "Extract %s"
+msgstr "Розпакувати %s"
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:15
+msgid "Install sccache"
+msgstr "Встановити sccache"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:9
+msgid "Render %s"
+msgstr "Згенерувати %s"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:12
+msgid "Remove %s"
+msgstr "Видалити %s"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:15
+msgid "GCC templates processed for series %s"
+msgstr "Шаблони GCC оброблені для серії %s"
+
+#~ msgid "Configure"
+#~ msgstr "Налаштувати"
+
+#~ msgid "Build"
+#~ msgstr "Зібрати"
+
+#~ msgid "Install"
+#~ msgstr "Встановити"
+
+#~ msgid "Cleanup .a"
+#~ msgstr "Очистити .a файли"
+
+#~ msgid "Cleanup .o"
+#~ msgstr "Очистити .o файли"

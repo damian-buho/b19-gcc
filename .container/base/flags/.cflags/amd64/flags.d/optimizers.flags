@@ -1,0 +1,7 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+-O3                                     # Maximum optimization level for performance
+-ffunction-sections                     # Place each function in its own section for better linking
+-fdata-sections                         # Place each data item in its own section for better linking

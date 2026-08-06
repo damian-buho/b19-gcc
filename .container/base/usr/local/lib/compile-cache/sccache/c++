@@ -1,0 +1,8 @@
+#!/bin/sh
+
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+for a in "$@"; do case "$a" in *.s) exec /usr/bin/c++ "$@" ;; esac; done
+exec /usr/local/bin/sccache /usr/bin/c++ "$@"

@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+-Wl,--gc-sections                       # Enable garbage collection of unused sections
+-Wl,--as-needed                         # Only link libraries that are actually needed
+-Wl,-O3                                 # Optimize linker for performance
+-Wl,--strip-all                         # Remove all symbol information from output
+-Wl,-z,relro                            # Enable RELRO (Relocation Read-Only) for security
+-Wl,-z,now                              # Resolve all symbols immediately at load time

@@ -1,0 +1,134 @@
+#!/usr/bin/env bash
+
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+    set -e
+
+    # Default RATIO value if not set
+    RATIO="${B19_BUILD_PROC_RATIO:-0.8}"
+    # Calculate the number of jobs based on nproc and RATIO
+    # Ensure integer division and handle edge cases
+    CPU_COUNT=$(nproc)
+    JOBS=$(awk -v cpus="${CPU_COUNT}" -v ratio="${RATIO}" 'BEGIN {
+      jobs = int(cpus * ratio);
+      if (jobs < 1) jobs = 1; # Ensure at least 1 job
+      print jobs;
+    }')
+
+    # Set MAKEFLAGS with calculated jobs
+    MAKEFLAGS="-j${JOBS}"
+    export MAKEFLAGS
+
+    # Logging the result (optional)
+    b19-log info "BUILD" "Using ${JOBS} jobs out of ${CPU_COUNT} CPUs with RATIO=${RATIO}"
+
+    B19_FLAGS_PATH="/flags"
+
+    GCCVERSION=$(gcc -dumpversion | awk -F. '{print $1}')
+
+    WANTED_CFLAGS_FILE="${B19_FLAGS_PATH}/.cflags/${TARGETARCH}/flags.txt"
+    WANTED_LDFLAGS_FILE="${B19_FLAGS_PATH}/.ldflags/${TARGETARCH}/flags.txt"
+    SELECTED_FLAGS_FILE="${B19_FLAGS_PATH}/.cflags/${TARGETARCH}/all.txt"
+    DUMMY_C_FILE="/tmp/dummy.c"
+
+    cat "${B19_FLAGS_PATH}"/.cflags/"${TARGETARCH}"/flags.d/*.flags | decomment > "${WANTED_CFLAGS_FILE}"
+
+    # Create a simple test C program
+    echo 'int main() { return 0; }' > "${DUMMY_C_FILE}"
+
+    # Clear the SELECTED_FLAGS_FILE
+    echo > "${SELECTED_FLAGS_FILE}"
+
+    # Iterate through each flag in WANTED_CFLAGS_FILE
+    while read -r FLAG; do
+        # Attempt to compile the dummy program with the flag
+        if gcc "${FLAG}" -o /dev/null "${DUMMY_C_FILE}" 2>/dev/null; then
+            echo "${FLAG}" >> "${SELECTED_FLAGS_FILE}"
+        else
+            b19-log bad "GCC" "Not supported: ${FLAG}"
+        fi
+    done < "${WANTED_CFLAGS_FILE}"
+
+    # Clean up
+    rm -f "${DUMMY_C_FILE}"
+
+    # Logging and build setup
+    b19-log info "BUILD" "Setup flags for ${TARGETARCH} and GCC ${GCCVERSION}"
+
+    CFLAGS=$(tr '\n' ' ' < "${SELECTED_FLAGS_FILE}")
+    CXXFLAGS="${CFLAGS}"
+
+    cat "${B19_FLAGS_PATH}"/.ldflags/"${TARGETARCH}"/flags.d/*.flags | decomment > "${WANTED_LDFLAGS_FILE}"
+    LDFLAGS=$(tr '\n' ' ' < "${WANTED_LDFLAGS_FILE}")
+
+    export CFLAGS CXXFLAGS LDFLAGS MAKEFLAGS
+
+    b19-log good "BUILD" "CFLAGS: ${CFLAGS}"
+    b19-log good "BUILD" "CXXFLAGS: ${CXXFLAGS}"
+    b19-log good "BUILD" "LDFLAGS: ${LDFLAGS}"
+    b19-log good "BUILD" "MAKEFLAGS: ${MAKEFLAGS}"
+
+    # --- Compile cache activation ---
+    # Remote endpoints are the tools' own env vars (SCCACHE_REDIS_ENDPOINT,
+    # CCACHE_REMOTE_STORAGE, SCCACHE_BUCKET, …) — passed through verbatim from
+    # the Dockerfile ENV, no b19-level scheme transformation.
+    # sccache without ANY remote backend races its daemon under concurrent
+    # builds sharing the same cache mount — graceful fallback to ccache.
+    # Probe: dump the resolved compile-cache env delimited + byte length so
+    # hidden characters (trailing space/CR from forge vars) and the effective
+    # verbosity surface in the log. warn level so it shows even at the warn
+    # default; not wrapped in _() — a token dump, not translatable prose.
+    # Bind first: ${#VAR} (byte length) has no :-default form, so under the
+    # set -u inherited from the sourcing Make recipe it aborts on an unset env.
+    # Use bound copies, not the env vars themselves, to keep the unset/empty
+    # distinction that the remote-backend logic below relies on.
+    _v_verbosity="${B19_VERBOSITY:-}"
+    _v_sccache_redis="${SCCACHE_REDIS_ENDPOINT:-}"
+    b19-log warn "BUILD" "compile-cache=[${B19_COMPILE_CACHE:-<unset>}] verbosity=[${_v_verbosity:-<unset>}](${#_v_verbosity}) sccache-redis=[${_v_sccache_redis:-<unset>}](${#_v_sccache_redis})"
+    unset _v_verbosity _v_sccache_redis
+    if [ "${B19_COMPILE_CACHE:-}" = "sccache" ] \
+       && [ -z "${SCCACHE_REDIS_ENDPOINT:-}${SCCACHE_MEMCACHED_ENDPOINT:-}${SCCACHE_BUCKET:-}${SCCACHE_GHA_CACHE_TO:-}" ]; then
+      b19-log warn "BUILD" "$(_p "sccache without a remote backend causes daemon races, switching to %s" "ccache")"
+      B19_COMPILE_CACHE=ccache
+      export B19_COMPILE_CACHE
+    fi
+
+    case "${B19_COMPILE_CACHE:-}" in
+      sccache)
+        # With a remote backend the remote (Redis/…) is the persistent store,
+        # so the local disk cache only stages the miss→store write. Pointing it
+        # at the BuildKit --mount=type=cache risks EBUSY (os error 16) on the
+        # rename into place; tmpfs can't EBUSY and the remote survives across
+        # builds. No remote (defensive — the probe above reroutes to ccache)
+        # still needs the cache mount to persist anything at all.
+        if [ -n "${SCCACHE_REDIS_ENDPOINT:-}${SCCACHE_MEMCACHED_ENDPOINT:-}${SCCACHE_BUCKET:-}${SCCACHE_GHA_CACHE_TO:-}" ]; then
+          SCCACHE_DIR="${B19_TEMP_PATH:-/tmp}/sccache"
+          b19-log info "BUILD" "$(_p "sccache local cache on tmpfs (%s), remote is persistent" "${SCCACHE_DIR}")"
+        else
+          SCCACHE_DIR="${B19_COMPILE_CACHE_PATH:-}/sccache"
+          b19-log info "BUILD" "$(_p "sccache local cache on cache mount (%s)" "${SCCACHE_DIR}")"
+        fi
+        b19-run "BUILD" "$(_ "Create sccache cache directory")" --  mkdir -p "${SCCACHE_DIR}"
+        export SCCACHE_DIR
+        ln -sfn /usr/local/lib/compile-cache/sccache/* /usr/local/lib/compile-cache/
+        ;;
+      ccache)
+        CCACHE_DIR="${B19_COMPILE_CACHE_PATH:-}/ccache"
+        b19-run "BUILD" "$(_ "Create ccache cache directory")" --  mkdir -p "${CCACHE_DIR}"
+        export CCACHE_DIR CCACHE_MAXSIZE
+        ln -sfn /usr/local/lib/compile-cache/ccache/* /usr/local/lib/compile-cache/
+        if [ -n "${CCACHE_REMOTE_STORAGE:-}" ]; then
+          b19-log info "BUILD" "$(_p "Compile cache: ccache + remote (%s)" "${CCACHE_REMOTE_STORAGE}")"
+        else
+          b19-log info "BUILD" "$(_p "Compile cache: ccache (%s)" "${CCACHE_DIR}")"
+        fi
+        ;;
+      off)
+        PATH=$(echo "${PATH}" | tr ':' '\n' | grep -v '/usr/local/lib/compile-cache' | tr '\n' ':')
+        PATH="${PATH%:}"
+        export PATH
+        b19-log warn "BUILD" "$(_p "Compile cache: %s" "${B19_COMPILE_CACHE:-}")"
+        ;;
+    esac

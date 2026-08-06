@@ -1,0 +1,5 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+https://github.com/mozilla/sccache/releases/download/v${M6E_UPSTREAM_VERSION}/sccache-v${M6E_UPSTREAM_VERSION}-aarch64-unknown-linux-musl.tar.gz

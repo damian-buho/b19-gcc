@@ -1,0 +1,85 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+#
+# SPDX-License-Identifier: MIT
+msgid ""
+msgstr ""
+"Project-Id-Version: gcc development\n"
+"Report-Msgid-Bugs-To: i18n@b19.dev\n"
+"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: .container/base/tools.d/setup-build:72
+msgid "sccache without %s causes build races, falling back to ccache"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:81
+msgid "Create sccache cache directory"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:84
+msgid "Compile cache: sccache + Redis (%s)"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:89
+msgid "Create ccache cache directory"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:95
+msgid "Compile cache: ccache + Redis (%s)"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:97
+msgid "Compile cache: ccache (%s)"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:104
+msgid "Compile cache: %s"
+msgstr ""
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:4
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:5
+msgid "stats: %s"
+msgstr ""
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:6
+msgid "Compile cache was disabled (%s), no stats"
+msgstr ""
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:7
+msgid "Unknown compile cache mode: %s"
+msgstr ""
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:7
+msgid "Set gcc-%s as default"
+msgstr ""
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:12
+msgid "GCC %s set as default"
+msgstr ""
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:9
+msgid "Extract %s"
+msgstr ""
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:15
+msgid "Install sccache"
+msgstr ""
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:9
+msgid "Render %s"
+msgstr ""
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:12
+msgid "Remove %s"
+msgstr ""
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:15
+msgid "GCC templates processed for series %s"
+msgstr ""

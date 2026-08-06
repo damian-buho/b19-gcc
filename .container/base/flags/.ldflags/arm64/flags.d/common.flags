@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
+#
+# SPDX-License-Identifier: MIT
+
+-Wl,--no-as-needed                      # Link all libraries even if not directly referenced
+-Wl,-z,now                              # Resolve all symbols immediately at load time
+-Wl,-z,relro                            # Enable RELRO (Relocation Read-Only) for security
+-fstack-protector-strong                # Enable strong stack protection
+-lm                                     # Link with math library
