@@ -4,82 +4,102 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: gcc development\n"
-"Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"Project-Id-Version: gcc 1.0.0-4-g0e16a80\n"
+"Report-Msgid-Bugs-To: https://codeberg.org/b19/gcc/issues\n"
+"POT-Creation-Date: 2026-08-07 22:09+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .container/base/tools.d/setup-build:72
-msgid "sccache without %s causes build races, falling back to ccache"
+#: .container/base/tools.d/setup-build:93
+msgid "sccache without a remote backend causes daemon races, switching to %s"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:81
+#: .container/base/tools.d/setup-build:108
+msgid "sccache local cache on tmpfs (%s), remote is persistent"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:111
+msgid "sccache local cache on cache mount (%s)"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:113
 msgid "Create sccache cache directory"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:84
-msgid "Compile cache: sccache + Redis (%s)"
-msgstr ""
-
-#: .container/base/tools.d/setup-build:89
+#: .container/base/tools.d/setup-build:119
 msgid "Create ccache cache directory"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:95
-msgid "Compile cache: ccache + Redis (%s)"
+#: .container/base/tools.d/setup-build:123
+msgid "Compile cache: ccache + remote (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:97
+#: .container/base/tools.d/setup-build:125
 msgid "Compile cache: ccache (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:104
+#: .container/base/tools.d/setup-build:132
 msgid "Compile cache: %s"
 msgstr ""
 
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:4
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:5
-msgid "stats: %s"
-msgstr ""
-
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:6
-msgid "Compile cache was disabled (%s), no stats"
-msgstr ""
-
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:7
-msgid "Unknown compile cache mode: %s"
-msgstr ""
-
-#: .container/base/build.d/base/post/100-install-gcc.sh:7
-msgid "Set gcc-%s as default"
-msgstr ""
-
-#: .container/base/build.d/base/post/100-install-gcc.sh:12
-msgid "GCC %s set as default"
-msgstr ""
-
-#: .container/base/build.d/base/post/050-install-compile-cache.sh:9
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:13
 msgid "Extract %s"
 msgstr ""
 
-#: .container/base/build.d/base/post/050-install-compile-cache.sh:15
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:19
 msgid "Install sccache"
 msgstr ""
 
-#: .container/base/build.d/base/pre/200-setup-sources.sh:9
+#: .container/base/build.d/base/post/100-install-gcc.sh:11
+msgid "Set gcc-%s as default"
+msgstr ""
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:23
+msgid "Set cpp-%s as default"
+msgstr ""
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:26
+msgid "GCC %s set as default"
+msgstr ""
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:13
 msgid "Render %s"
 msgstr ""
 
-#: .container/base/build.d/base/pre/200-setup-sources.sh:12
+#: .container/base/build.d/base/pre/200-setup-sources.sh:16
 msgid "Remove %s"
 msgstr ""
 
-#: .container/base/build.d/base/pre/200-setup-sources.sh:15
+#: .container/base/build.d/base/pre/200-setup-sources.sh:19
 msgid "GCC templates processed for series %s"
+msgstr ""
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:8
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:9
+msgid "stats: %s"
+msgstr ""
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:10
+msgid "Compile cache was disabled (%s), no stats"
+msgstr ""
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:11
+msgid "Unknown compile cache mode: %s"
+msgstr ""
+
+#: .container/user/test.d/1300-compile-test.sh:20
+msgid "gcc-%s compile test passed"
+msgstr ""
+
+#: .container/user/test.d/1300-compile-test.sh:27
+msgid "g++-%s compile test passed"
+msgstr ""
+
+#: .container/user/test.d/1300-compile-test.sh:41
+msgid "cmake %s + ninja %s build test passed"
 msgstr ""
