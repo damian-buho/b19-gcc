@@ -6,8 +6,9 @@ $schema: https://projectfile.org/schema/v1.json
 identity:
   created: "2026-06-01"
   name: gcc
-  summary: GCC compiler toolchain from Ubuntu apt with sccache/ccache
+  summary: Community-maintained distribution of GCC based on B19/Ubuntu
   title: B19/GCC
+  description: Community-maintained distribution of GCC built on B19/Ubuntu. This repository holds only the packaging — Dockerfile, build scripts, and configuration, all MIT-licensed; the upstream GCC is fetched at build time and retains its own licensing.
 includes:
   - .makefile/b19/ci.yaml
   - .makefile/b19/images/ubuntu.yaml
@@ -16,19 +17,47 @@ includes:
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
 kind: SoftwareSourceCode
 links:
-  - label: B19/GCC on Codeberg
+  - label:
+      en: B19/GCC on Codeberg
+      es: B19/GCC en Codeberg
+      uk: B19/GCC на Codeberg
+    tags:
+      - public
+      - badges
+      - badges-gitea
     type: source-code
     url: https://codeberg.org/b19/gcc
-  - label: B19/GCC on GitHub
+  - label:
+      en: B19/GCC on GitHub
+      es: B19/GCC en GitHub
+      uk: B19/GCC на GitHub
+    tags:
+      - public
+      - badges
+      - badges-github
     type: source-code
     url: https://github.com/damian-buho/b19-gcc
-  - label: B19/GCC on kiota.ch
+  - label:
+      en: B19/GCC on kiota.ch
+      es: B19/GCC en kiota.ch
+      uk: B19/GCC на kiota.ch
+    preferred: true
     type: source-code
     url: https://kiota.ch/b19/gcc
-  - label: Issues on Codeberg
+  - label:
+      en: Issues on Codeberg
+      es: Incidencias en Codeberg
+      uk: Issues на Codeberg
+    tags:
+      - support
     type: bugs
     url: https://codeberg.org/b19/gcc/issues
-  - label: Issues on GitHub
+  - label:
+      en: Issues on GitHub
+      es: Incidencias en GitHub
+      uk: Issues на GitHub
+    tags:
+      - support
     type: bugs
     url: https://github.com/damian-buho/b19-gcc/issues
 org:
@@ -37,14 +66,14 @@ org:
       compile-stage: compile-gcc
       root-stage: base
   projectfile:
-    # The compile-cache entries are shell shims named for the compiler they
-    # shadow on PATH, so an extension would defeat their whole purpose. The
-    # fleet conventions in m6e traits/shell.yaml cannot reach a shape this
-    # project invented; naming it here keeps them lintable and cache-visible.
     attributes:
       shell:
         include:
-          - "**/compile-cache/*/*"
+          - '**/compile-cache/*/*'
+    image:
+      series: "{B19_GCC_SERIES}"
+      path: ${org}/${name}-${series}
+      flatpath: ${org}-${name}-${series}
     ci:
       image: b19/gcc-{B19_GCC_SERIES}
       matrix:
@@ -68,3 +97,13 @@ repositories:
   - role: origin
     type: git
     url: ssh://git@kiota.ch/b19/gcc.git
+keywords:
+  - gcc
+  - compiler
+  - toolchain
+  - c
+  - cpp
+  - docker
+technologies:
+  - c
+  - cpp
