@@ -4,13 +4,13 @@ SPDX-License-Identifier: MIT
 pf-cli-managed: yes
 -->
 
-<!-- textlint-disable terminology -->
+<!-- textlint-disable terminology,common-misspellings -->
 
 [English](../../README.md) · [Українська](../uk/README.md)
 
 # B19/GCC
 
-GCC compiler toolchain from Ubuntu apt with sccache/ccache
+Distribución de GCC mantenida por la comunidad, basada en B19/Ubuntu
 
 [![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![License](https://img.shields.io/static/v1?label=license&message=MIT&color=4c1&style=flat-square)](LICENSE) ![Commit style](https://img.shields.io/static/v1?label=commits&message=conventional&color=blue&style=flat-square) ![Workflow](https://img.shields.io/static/v1?label=workflow&message=git-flow&color=blue&style=flat-square) ![Versioning](https://img.shields.io/static/v1?label=versioning&message=semantic&color=blue&style=flat-square) [![PRs welcome](https://img.shields.io/static/v1?label=PRs&message=welcome&color=4c1&style=flat-square)](CONTRIBUTING.md) [![Citation](https://img.shields.io/static/v1?label=citation&message=cff&color=blue&style=flat-square)](CITATION.cff) [![REUSE compliance](https://api.reuse.software/badge/codeberg.org/b19/gcc)](https://api.reuse.software/info/codeberg.org/b19/gcc)
 
@@ -20,9 +20,9 @@ GCC compiler toolchain from Ubuntu apt with sccache/ccache
 
 ## Características
 
-- Architecture-specific optimization flags with compile-time probing
-- Transparent compiler caching (sccache / ccache)
-- GCC toolchain from APT with series selection
+- Flags de optimización específicos de cada arquitectura con sondeo en tiempo de compilación
+- Caché de compilador transparente (sccache / ccache)
+- Cadena de herramientas GCC desde APT con selección de serie
 - Persistent APT cache across builds
 - Service process management with log routing (b19-exec)
 - Cached artifact downloads with integrity verification (b19-fetch)
@@ -51,7 +51,7 @@ GCC compiler toolchain from Ubuntu apt with sccache/ccache
 - Pre-installed utility tools
 - XDG Base Directory paths
 
-Consulta [FEATURES.md](../../FEATURES.md) para ver la lista completa.
+Consulta [FEATURES.md](FEATURES.md) para ver la lista completa.
 
 ## Qué entrega este proyecto
 
@@ -134,12 +134,18 @@ Para el bucle de desarrollo local, `make dev-container` levanta el dev-container
 
 ## Enlaces
 
+### Proyecto
+
 - [Especificación de Projectfile](https://projectfile.org)
-- [B19/GCC on Codeberg](https://codeberg.org/b19/gcc)
-- [B19/GCC on GitHub](https://github.com/damian-buho/b19-gcc)
-- [B19/GCC on kiota.ch](https://kiota.ch/b19/gcc)
-- [Issues on Codeberg](https://codeberg.org/b19/gcc/issues)
-- [Issues on GitHub](https://github.com/damian-buho/b19-gcc/issues)
+- [B19/GCC en Codeberg](https://codeberg.org/b19/gcc)
+- [B19/GCC en GitHub](https://github.com/damian-buho/b19-gcc)
+- [B19/GCC en kiota.ch](https://kiota.ch/b19/gcc)
+- [Incidencias en Codeberg](https://codeberg.org/b19/gcc/issues)
+- [Incidencias en GitHub](https://github.com/damian-buho/b19-gcc/issues)
+
+### Otros
+
+- [Del autor](https://dbuho.me)
 
 ## Licencia
 
