@@ -30,7 +30,7 @@ jobs:
         B19_GCC_SERIES: ["16", "15"]
     env:
       B19_GCC_SERIES: ${{ matrix.B19_GCC_SERIES }}
-      M6E_IMAGE_PUBLISHED: ${{ vars.OUTPUT_REGISTRY }}/b19/gcc-${{ matrix.B19_GCC_SERIES }}:latest
+      M6E_IMAGE_PUBLISHED: ghcr.io/damian-buho/b19/gcc-${{ matrix.B19_GCC_SERIES }}:latest
     steps:
       - uses: actions/checkout@v7
         with:
@@ -50,7 +50,7 @@ jobs:
           run: auto-grype image
           env: |-
             B19_GCC_SERIES=${{ matrix.B19_GCC_SERIES }}
-            M6E_IMAGE_PUBLISHED=${{ vars.OUTPUT_REGISTRY }}/b19/gcc-${{ matrix.B19_GCC_SERIES }}:latest
+            M6E_IMAGE_PUBLISHED=ghcr.io/damian-buho/b19/gcc-${{ matrix.B19_GCC_SERIES }}:latest
           mounts: ${{ runner.temp }}/ci-cache/grype-db:/app/.cache/grype:ro
       - name: restore trivy-db
         uses: actions/cache/restore@v4
@@ -67,7 +67,7 @@ jobs:
           run: auto-trivy image
           env: |-
             B19_GCC_SERIES=${{ matrix.B19_GCC_SERIES }}
-            M6E_IMAGE_PUBLISHED=${{ vars.OUTPUT_REGISTRY }}/b19/gcc-${{ matrix.B19_GCC_SERIES }}:latest
+            M6E_IMAGE_PUBLISHED=ghcr.io/damian-buho/b19/gcc-${{ matrix.B19_GCC_SERIES }}:latest
             TRIVY_CACHE_BACKEND
           mounts: ${{ runner.temp }}/ci-cache/trivy-db:/app/.cache/trivy:ro
       - uses: actions/upload-artifact@v7
@@ -79,7 +79,12 @@ jobs:
           overwrite: true
   source-is-audited:
     runs-on: ubuntu-latest
+    needs: ["source-is-secure"]
     if: (github.event_name == 'workflow_dispatch') || (github.event_name == 'schedule')
+    steps:
+      - run: echo source-is-audited
+  source-is-secure:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v7
         with:
@@ -117,7 +122,7 @@ jobs:
       - uses: actions/upload-artifact@v7
         if: ${{ always() }}
         with:
-          name: reports-source-is-audited-${{ github.run_id }}
+          name: reports-source-is-secure-${{ github.run_id }}
           path: reports/
           if-no-files-found: warn
           overwrite: true
