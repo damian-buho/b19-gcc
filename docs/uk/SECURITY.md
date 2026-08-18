@@ -171,5 +171,4 @@ B19/GCC наразі не має програми винагород за вра
 | CVE-2026-53277 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-53359 | unfixable kernel headers in linux-libc-dev (no fix published) |
 
-*Згенеровано з projectfile ([дізнатися як](https://projectfile.org/how-to/security))*
 <!-- textlint-enable -->

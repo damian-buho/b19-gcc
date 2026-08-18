@@ -169,5 +169,3 @@ depends on an upstream release, or the advisory does not apply to this project):
 | CVE-2026-53276 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-53277 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-53359 | unfixable kernel headers in linux-libc-dev (no fix published) |
-
-*Generated from projectfile ([learn how](https://projectfile.org/how-to/security))*

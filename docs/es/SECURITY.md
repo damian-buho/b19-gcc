@@ -173,5 +173,4 @@ aplica a este proyecto):
 | CVE-2026-53277 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-53359 | unfixable kernel headers in linux-libc-dev (no fix published) |
 
-*Generado desde projectfile ([saber cómo](https://projectfile.org/how-to/security))*
 <!-- textlint-enable -->
