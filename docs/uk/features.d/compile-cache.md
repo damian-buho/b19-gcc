@@ -4,6 +4,8 @@ SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
 SPDX-License-Identifier: MIT
 -->
 
+<!-- textlint-disable terminology,common-misspellings -->
+
 # Прозоре кешування компілятора (sccache / ccache)
 
 - Обгортки компілятора в `/usr/local/lib/compile-cache/` прозоро перехоплюють виклики `gcc`, `g++`, `cc` і `c++` за пріоритетом PATH — жодних змін у засобах збирання не потрібно.
@@ -12,3 +14,5 @@ SPDX-License-Identifier: MIT
 - Автоматичне плавне переключення зі sccache на ccache, коли не налаштовано жодного віддаленого бекенда, що запобігає гонитві між паралельними демонами.
 - Кеш можна повністю вимкнути через `B19_COMPILE_CACHE=off`.
 - Статистика попадань і промахів кешу записується в журнал наприкінці кожного збирання.
+
+<!-- textlint-enable -->
