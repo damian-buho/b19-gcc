@@ -3,6 +3,8 @@ SPDX-FileCopyrightText: 2026 Damián Búho <damian.buho@proton.me>
 SPDX-License-Identifier: MIT
 -->
 
+[Español](docs/es/FEATURES.md) · [Українська](docs/uk/FEATURES.md)
+
 # Features
 
 ## Project Features
@@ -18,7 +20,7 @@ SPDX-License-Identifier: MIT
 
 - Compiler wrapper scripts in `/usr/local/lib/compile-cache/` transparently intercept `gcc`, `g++`, `cc`, and `c++` calls via PATH precedence -- no build tool changes needed.
 - Two cache backends selectable at build time: `sccache` (default) for distributed caching and `ccache` for local caching.
-- Remote cache backends are configured via the tools\\u2019 own native env vars (`SCCACHE_REDIS_ENDPOINT`, `CCACHE_REMOTE_STORAGE`, `SCCACHE_BUCKET`, etc.) — passed verbatim, no b19-level scheme transformation.
+- Remote cache backends are configured via the tools’ own native env vars (`SCCACHE_REDIS_ENDPOINT`, `CCACHE_REMOTE_STORAGE`, `SCCACHE_BUCKET`, etc.) — passed verbatim, no b19-level scheme transformation.
 - Automatic graceful fallback from sccache to ccache when no remote backend is configured, preventing concurrent daemon races.
 - Cache can be disabled entirely with `B19_COMPILE_CACHE=off`.
 - Cache hit/miss statistics are logged at the end of every build.
@@ -31,25 +33,18 @@ SPDX-License-Identifier: MIT
 - Ships a complete build toolchain: gdb, valgrind, cmake, ninja-build, autoconf, automake, bison, flex, libtool, binutils, pkg-config, and ccache.
 - The resolved GCC version is exported for downstream build stages to consume.
 
-### Inheritable compile-gcc build hooks
-
-- All hooks in the `compile-gcc` stage are inheritable (`*.i.sh`): every project using a `compile-gcc` builder stage gets the full build setup automatically.
-- Inherited capabilities include: APT cacher auto-detection, CPU count detection with configurable process ratio (`B19_BUILD_PROC_RATIO`), automatic `MAKEFLAGS=-j{N}` parallel setup, architecture-specific flag probing, compile cache activation, and cache statistics reporting.
-- Resolved dependency files are exported to `/export/deps/` so the final image stage can reuse them without re-probing.
-- Downstream images (node, python, r, ruby, php, erlang, haskell) inherit all of this with zero configuration.
-
-## Inherited from B19/Ubuntu 1.0.0
+## Inherited from B19/Ubuntu 1.4.1
 
 ### Persistent APT cache across builds
 
 - APT package and index caches survive across builds via BuildKit cache mounts, keyed by Ubuntu series and architecture.
 - Repeated builds reuse downloaded packages instead of re-downloading.
-- Optional LAN APT cacher proxy auto-detection for environments with a caching proxy.
+- Optional LAN APT cacher proxy, enabled by setting `M6E_APT_CACHE_HOST`.
 
 ### Service process management with log routing (b19-exec)
 
 - Long-running processes (daemons, servers) have stdout and stderr automatically routed through the structured logger.
-- The service PID is tracked for signal forwarding -- Docker stop gracefully terminates the main process.
+- The service PID is tracked for signal forwarding — Docker stop gracefully terminates the main process.
 - Log levels for stdout and stderr streams are independently configurable.
 - Exit code of the service is captured and available to downstream hooks.
 
@@ -79,7 +74,7 @@ SPDX-License-Identifier: MIT
 - All image build logic lives in numbered shell scripts instead of inline Dockerfile `RUN` commands.
 - Hooks are organized in `pre/on/post` phases and auto-discovered by the stage name passed to `build-stage`.
 - The reserved `always/{pre,post}` scope brackets every stage, whatever it is named, so cross-cutting setup is written once instead of per stage.
-- Inheritable hooks propagate to downstream images automatically via Docker layer overlay -- downstream gets parent’s build logic for free.
+- Inheritable hooks propagate to downstream images automatically via Docker layer overlay — downstream gets parent’s build logic for free.
 - Non-inheritable hooks are cleaned up after execution to prevent leaking into later stages.
 
 ### Automatic CPU count detection (NUMPROCS)
@@ -92,7 +87,7 @@ SPDX-License-Identifier: MIT
 
 - External dependency metadata (URL, version, SHA-512 hash) stored as plain text files, completely separate from build scripts.
 - Supports architecture-specific downloads, multi-version series, and nested component paths.
-- Dependencies are auto-discovered at Makefile parse time -- add files to the right directory and the build picks them up without manual declarations.
+- Dependencies are auto-discovered at Makefile parse time — add files to the right directory and the build picks them up without manual declarations.
 - `make fetch` pre-downloads everything for offline builds; version bumps trigger automatic re-fetch and hash updates.
 
 ### Pluggable startup system (entrypoint.d)
@@ -106,13 +101,13 @@ SPDX-License-Identifier: MIT
 
 - Every major subsystem (entrypoint, healthchecks, bootstrap, tests, secrets, port validation, i18n, shell hooks) can be disabled at runtime via environment variables.
 - Individual entrypoint and bootstrap hooks can be skipped by name without disabling the whole subsystem.
-- No image rebuild required -- toggles are runtime-only.
+- No image rebuild required — toggles are runtime-only.
 
 ### Built-in health monitoring (healthcheck.d)
 
 - Docker-native healthcheck declared in the base image and inherited by all downstream images with no extra configuration.
 - Seven default checks: disk space on home, cache, and temp directories; HTTPS connectivity, DNS resolution, ICMP ping; and filesystem writability.
-- Network checks are fault-tolerant -- success on any target counts as pass.
+- Network checks are fault-tolerant — success on any target counts as pass.
 - All network checks automatically skip in offgrid mode; all checks can be disabled at runtime.
 - Downstream images add service-specific checks (HTTP endpoints, database connections, process liveness) by dropping scripts into a directory.
 
@@ -127,7 +122,7 @@ SPDX-License-Identifier: MIT
 
 - Every image records its build metadata (namespace, project, version, base image) into a lineage file during build.
 - Downstream images chain lineage from their parent, producing a full base-to-current provenance chain.
-- At container startup, the full lineage chain is logged, making it easy to trace what a running container was built from.
+- The full lineage chain is logged at startup (debug verbosity) and readable from the file at any time, making it easy to trace what a running container was built from.
 
 ### Structured, level-filtered logging (b19-log)
 
@@ -148,31 +143,31 @@ SPDX-License-Identifier: MIT
 - Build-time: downloads are blocked, APT updates are skipped, SSH keyscans are skipped. All artifacts must come from cache tiers.
 - Runtime: network healthchecks automatically skip with a healthy result, so containers stay green on isolated networks.
 - APT package lists can be snapshotted and injected for fully offline image builds.
-- LAN services (caching proxies, registries) remain reachable -- offgrid blocks internet, not all networking.
+- LAN services (caching proxies, registries) remain reachable — offgrid blocks internet, not all networking.
 
 ### Runtime overlay injection
 
 - Configuration or data files can be injected at container startup by setting `B19_OVERLAY` to a directory name.
-- Overlay contents are recursively copied to the container root, overwriting existing files -- no image rebuild needed.
+- Overlay contents are recursively copied to the container root, overwriting existing files — no image rebuild needed.
 - Skipped in immutable mode, preventing runtime modification of production-locked images.
 
 ### Reproducible base image (pinned by digest)
 
 - The Ubuntu base image is pinned by SHA-256 digest, not by tag, ensuring deterministic builds.
-- Supports multiple Ubuntu series (resolute, noble, optional: jammy, questing) selectable at build time.
+- Supports multiple Ubuntu series (resolute, noble, jammy) selectable at build time.
 - APT mirrors are configurable per architecture for LAN mirrors or air-gapped environments.
 
 ### Port validation
 
-- All `*PORT*` environment variables are validated at startup against the WHATWG blocklist of forbidden ports and privileged ports (\<1024).
-- Catches misconfigurations like `PORT=0` or `PORT=22` early, before the service fails silently.
+- Every environment variable whose name ends in `PORT` is validated at startup against the WHATWG blocklist of forbidden ports and privileged ports (\<1024).
+- Catches misconfigurations like `HTTP_PORT=22` early, before the service fails silently.
 - Can be disabled at runtime without rebuilding the image.
 
 ### Unified lifecycle runner family
 
 - Eight numbered-hook runners cover the full container lifecycle: startup, healthchecks, tests, bootstrap, build hooks, benchmarks, reports, and shell sessions.
 - All runners share the same pattern: drop a numbered script into a directory, it is auto-discovered and executed.
-- Scripts from different image layers merge seamlessly -- upstream and downstream hooks coexist without conflict.
+- Scripts from different image layers merge — upstream and downstream hooks coexist without conflict.
 - Each runner has tailored failure semantics: abort on error (entrypoint, bootstrap), continue and count failures (healthchecks, tests), always succeed (reports).
 
 ### Docker secrets auto-loading (secrets)
@@ -199,21 +194,21 @@ SPDX-License-Identifier: MIT
 
 - Jinja2-compatible template rendering at both build time and container startup.
 - Drop a `.j2` file anywhere in the app directory; it is discovered at build time and rendered at every startup with all environment variables available.
-- Runtime rendering is parallel and automatic -- downstream images get it with zero configuration.
+- Runtime rendering is parallel and automatic — downstream images get it with zero configuration.
 - Immutable mode (`B19_IMMUTABLE=Y`) locks the filesystem to build-time state, skipping all runtime rendering.
 
 ### Built-in test framework (test.d)
 
 - Tests run inside the running container via `make test` or `docker exec`.
 - Automatically waits for healthchecks to pass before executing.
-- No test framework dependency -- tests are plain shell scripts with exit codes.
+- No test framework dependency — tests are plain shell scripts with exit codes.
 - Supports Jinja2 templates in tests, useful for asserting build-time values at runtime.
 - Continues on failure and reports the total count; never hides partial results.
 
 ### Pre-installed utility tools
 
-- `mold` as default linker for faster linking (opt-out available).
-- `fd` for fast file finding, `minijinja-cli` for template rendering.
+- `mold` as default linker (opt-out available).
+- `fd` for file finding, `minijinja-cli` for template rendering.
 - `aria2c` for multi-connection downloads, `tini` as PID 1 for zombie reaping.
 - Parallel compression tools: `pbzip2`, `pigz`, `pixz`.
 - gettext tools for i18n compilation, `cURL` for network operations.

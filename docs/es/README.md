@@ -12,44 +12,47 @@ pf-cli-managed: yes
 
 Distribución de GCC mantenida por la comunidad, basada en B19/Ubuntu
 
-[![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![License](https://img.shields.io/static/v1?label=license&message=MIT&color=4c1&style=flat-square)](LICENSE) ![Commit style](https://img.shields.io/static/v1?label=commits&message=conventional&color=blue&style=flat-square) ![Workflow](https://img.shields.io/static/v1?label=workflow&message=git-flow&color=blue&style=flat-square) ![Versioning](https://img.shields.io/static/v1?label=versioning&message=semantic&color=blue&style=flat-square) [![PRs welcome](https://img.shields.io/static/v1?label=PRs&message=welcome&color=4c1&style=flat-square)](CONTRIBUTING.md) [![Citation](https://img.shields.io/static/v1?label=citation&message=cff&color=blue&style=flat-square)](CITATION.cff) [![REUSE compliance](https://api.reuse.software/badge/codeberg.org/b19/gcc)](https://api.reuse.software/info/codeberg.org/b19/gcc)
+[![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=4c1&style=flat-square)](LICENSE) ![Commit style](https://badges.kiota.ch/static/v1?label=commits&message=conventional&color=blue&style=flat-square) ![Workflow](https://badges.kiota.ch/static/v1?label=workflow&message=git-flow&color=blue&style=flat-square) ![Versioning](https://badges.kiota.ch/static/v1?label=versioning&message=semantic&color=blue&style=flat-square) [![PRs welcome](https://badges.kiota.ch/static/v1?label=PRs&message=welcome&color=4c1&style=flat-square)](CONTRIBUTING.md) [![Citation](https://badges.kiota.ch/static/v1?label=citation&message=cff&color=blue&style=flat-square)](CITATION.cff) [![REUSE compliance](https://api.reuse.software/badge/codeberg.org/b19/gcc)](https://api.reuse.software/info/codeberg.org/b19/gcc)
 
-![Project status](https://img.shields.io/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit](https://img.shields.io/gitea/last-commit/b19/gcc?gitea_url=https://codeberg.org&style=flat-square)](https://codeberg.org/b19/gcc)
+![Project status](https://badges.kiota.ch/static/v1?label=status&message=maintained&color=1d63ed&style=flat-square) [![Last commit on kiota.ch](https://badges.kiota.ch/gitea/last-commit/b19/gcc?gitea_url=https://kiota.ch&style=flat-square)](https://kiota.ch/b19/gcc)
 
-[![Build status on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg)](https://kiota.ch/b19/gcc/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
 
 ## Características
 
 - Flags de optimización específicos de cada arquitectura con sondeo en tiempo de compilación
 - Caché de compilador transparente (sccache / ccache)
 - Cadena de herramientas GCC desde APT con selección de serie
-- Persistent APT cache across builds
-- Service process management with log routing (b19-exec)
-- Cached artifact downloads with integrity verification (b19-fetch)
-- Timed command execution with failure reporting (b19-run)
-- Run-once initialization (bootstrap.d)
-- Modular build hooks (build.d)
-- Automatic CPU count detection (NUMPROCS)
-- Declarative dependency management (b19-deps)
-- Pluggable startup system (entrypoint.d)
-- Feature toggles for all subsystems
-- Built-in health monitoring (healthcheck.d)
-- Multilingual shell output (b19-i18n)
-- Image lineage tracking
-- Structured, level-filtered logging (b19-log)
-- Non-root container by default
-- Air-gapped / offline build and runtime support
-- Runtime overlay injection
-- Reproducible base image (pinned by digest)
-- Port validation
-- Unified lifecycle runner family
-- Docker secrets auto-loading (secrets)
-- Interactive shell hooks (shell.d)
-- Graceful signal handling
-- Jinja2 configuration templates (minijinja-cli)
-- Built-in test framework (test.d)
-- Pre-installed utility tools
-- XDG Base Directory paths
+
+### Heredado de B19/Ubuntu 1.4.1
+
+- Caché APT persistente entre compilaciones
+- Gestión de procesos de servicio con enrutado de logs (b19-exec)
+- Descargas de artefactos con caché y verificación de integridad (b19-fetch)
+- Ejecución de comandos temporizada con informe de fallos (b19-run)
+- Inicialización de una sola vez (bootstrap.d)
+- Hooks de compilación modulares (build.d)
+- Detección automática del número de CPUs (NUMPROCS)
+- Gestión declarativa de dependencias (b19-deps)
+- Sistema de arranque conectable (entrypoint.d)
+- Conmutadores de funcionalidades para todos los subsistemas
+- Monitorización de estado integrada (healthcheck.d)
+- Salida de shell multilingüe (b19-i18n)
+- Seguimiento del linaje de la imagen
+- Logging estructurado con filtro por nivel (b19-log)
+- Contenedor sin privilegios de root por defecto
+- Soporte de compilación y runtime aislados de internet (air-gapped/offline)
+- Inyección de overlays en runtime
+- Imagen base reproducible (fijada por digest)
+- Validación de puertos
+- Familia unificada de runners del ciclo de vida
+- Autocarga de secretos de Docker (secrets)
+- Hooks de shell interactivo (shell.d)
+- Gestión elegante de señales
+- Plantillas de configuración Jinja2 (minijinja-cli)
+- Framework de tests integrado (test.d)
+- Herramientas de utilidad preinstaladas
+- Rutas XDG Base Directory
 
 Consulta [FEATURES.md](FEATURES.md) para ver la lista completa.
 
@@ -64,27 +67,28 @@ Consulta [FEATURES.md](FEATURES.md) para ver la lista completa.
 
 Descarga la imagen de contenedor publicada:
 
+### Descargar de GHCR
+
 ```sh
 docker pull ghcr.io/damian-buho/b19/gcc-16:latest
+docker pull ghcr.io/damian-buho/b19/gcc-15:latest
 ```
 
-Variantes disponibles: B19_GCC_SERIES: 16, 15
+### Descargar de DockerHub
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/gcc-15:latest
 docker pull docker.io/damianbuho/b19-gcc-16:latest
 docker pull docker.io/damianbuho/b19-gcc-15:latest
 ```
 
+Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
+
 Si los registros anteriores no están disponibles, descarga desde el origen:
+
+### Descargar de Kiota
 
 ```sh
 docker pull kiota.ch/b19/gcc-16:latest
-```
-
-Variantes disponibles: B19_GCC_SERIES: 16, 15
-
-```sh
 docker pull kiota.ch/b19/gcc-15:latest
 ```
 
@@ -92,14 +96,16 @@ docker pull kiota.ch/b19/gcc-15:latest
 
 Construye sobre esta imagen:
 
+### Desde GHCR
+
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/gcc-16:latest
+FROM ghcr.io/damian-buho/b19/gcc-15:latest
 ```
 
-Variantes disponibles: B19_GCC_SERIES: 16, 15
+### Desde DockerHub
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/gcc-15:latest
 FROM docker.io/damianbuho/b19-gcc-16:latest
 FROM docker.io/damianbuho/b19-gcc-15:latest
 ```
@@ -108,7 +114,9 @@ Para el patrón multietapa recomendado y el sistema de hooks de compilación (bu
 
 ## Compilación
 
-- [Referencia del Makefile](../MAKEFILE.md)
+Ejecuta `make` sin argumentos para el destino predeterminado; ejecuta `make help` para listar todos los destinos.
+
+Para el bucle de desarrollo local, `make dev-container` levanta el dev-container.
 
 Puntos de entrada de la canalización:
 
@@ -117,39 +125,20 @@ Puntos de entrada de la canalización:
 - `make check-outdated` — Report every pinned dependency that lags upstream
 - `make ready-to-publish` — Run the pseudo-CI pipeline locally — build, test and scan, without publishing
 
-Ejecuta `make` sin argumentos para el destino predeterminado; ejecuta `make help` para listar todos los destinos.
-
-Para el bucle de desarrollo local, `make dev-container` levanta el dev-container.
-
-## Documentación
-
-- [Known caveats](../caveats.md)
-
 ## Políticas
 
 - [Cómo contribuir](CONTRIBUTING.md)
 - [Política de seguridad](SECURITY.md)
 - [Cómo obtener ayuda](SUPPORT.md)
 - [Código de conducta](CODE_OF_CONDUCT.md)
+- [Política sobre IA y LLM](AI_POLICY.md)
 
 ## Enlaces
 
-### Proyecto
-
 - [Especificación de Projectfile](https://projectfile.org)
-- [B19/GCC en Codeberg](https://codeberg.org/b19/gcc)
-- [B19/GCC en GitHub](https://github.com/damian-buho/b19-gcc)
-- [B19/GCC en kiota.ch](https://kiota.ch/b19/gcc)
-- [Incidencias en Codeberg](https://codeberg.org/b19/gcc/issues)
-- [Incidencias en GitHub](https://github.com/damian-buho/b19-gcc/issues)
-
-### Otros
-
-- [Del autor](https://dbuho.me)
 
 ## Licencia
 
 Este proyecto se publica bajo la licencia MIT — consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-*Generado desde projectfile ([saber cómo](https://projectfile.org/how-to/readme))*
 <!-- textlint-enable -->
