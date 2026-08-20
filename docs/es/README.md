@@ -24,7 +24,7 @@ Distribución de GCC mantenida por la comunidad, basada en B19/Ubuntu
 - Caché de compilador transparente (sccache / ccache)
 - Cadena de herramientas GCC desde APT con selección de serie
 
-### Heredado de B19/Ubuntu 1.4.1
+### Heredado de B19/Ubuntu
 
 - Caché APT persistente entre compilaciones
 - Gestión de procesos de servicio con enrutado de logs (b19-exec)
