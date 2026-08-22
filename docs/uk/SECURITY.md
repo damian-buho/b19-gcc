@@ -70,6 +70,10 @@ B19/GCC наразі не має програми винагород за вра
 
 | ID | Причина |
 | --- | --- |
+| CVE-2026-74427 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-74268 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72472 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-74394 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64531 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-40190 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-54518 | unfixable kernel headers in linux-libc-dev (no fix published) |
