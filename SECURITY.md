@@ -74,6 +74,7 @@ depends on an upstream release, or the advisory does not apply to this project):
 | CVE-2026-72472 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-74394 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64531 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2025-10263 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-40190 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-54518 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-31589 | unfixable kernel headers in linux-libc-dev (no fix published) |
@@ -175,11 +176,18 @@ depends on an upstream release, or the advisory does not apply to this project):
 | CVE-2026-53359 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-53398 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-53399 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-64269 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64383 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64385 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64386 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64387 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-64393 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64535 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64564 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64597 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-68117 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-68470 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72003 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72111 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72124 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72288 | unfixable kernel headers in linux-libc-dev (no fix published) |
