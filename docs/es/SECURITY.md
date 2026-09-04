@@ -72,6 +72,26 @@ aplica a este proyecto):
 
 | ID | Motivo |
 | --- | --- |
+| CVE-2026-80725 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80721 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80718 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80716 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80714 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80710 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80702 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80700 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80693 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80692 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80691 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80683 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80681 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80671 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80668 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80665 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80644 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80637 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80634 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-80631 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-74535 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-74534 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-74529 | unfixable kernel headers in linux-libc-dev (no fix published) |
