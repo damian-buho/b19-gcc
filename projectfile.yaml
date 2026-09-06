@@ -21,6 +21,13 @@ includes:
   - .makefile/b19/vulnerabilities/linux-libc-dev.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
+keywords:
+  - gcc
+  - compiler
+  - toolchain
+  - c
+  - cpp
+  - docker
 kind: SoftwareSourceCode
 links:
   - label:
@@ -103,13 +110,6 @@ repositories:
   - role: origin
     type: git
     url: ssh://git@kiota.ch/b19/gcc.git
-keywords:
-  - gcc
-  - compiler
-  - toolchain
-  - c
-  - cpp
-  - docker
 technologies:
   - c
   - cpp
