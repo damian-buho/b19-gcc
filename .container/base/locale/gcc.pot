@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: gcc 1.0.0-4-g0e16a80\n"
+"Project-Id-Version: gcc 1.1.6\n"
 "Report-Msgid-Bugs-To: https://codeberg.org/b19/gcc/issues\n"
-"POT-Creation-Date: 2026-08-07 22:09+0000\n"
+"POT-Creation-Date: 2026-09-07 03:45+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
