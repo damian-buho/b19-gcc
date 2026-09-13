@@ -9,7 +9,7 @@
 cff-version: 1.2.0
 message: Please cite this software using the metadata from this file.
 type: software
-title: B19/GCC
+title: B19 / GCC
 abstract: Community-maintained distribution of GCC based on B19/Ubuntu
 authors:
   - family-names: Búho
@@ -32,3 +32,4 @@ keywords:
   - c
   - cpp
   - docker
+version: 1.1.6

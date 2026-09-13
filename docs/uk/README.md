@@ -8,7 +8,7 @@ pf-cli-managed: yes
 
 [English](../../README.md) · [Español](../es/README.md)
 
-# B19/GCC
+# B19 / GCC
 
 Дистрибуція GCC з підтримкою спільноти на основі B19/Ubuntu
 
