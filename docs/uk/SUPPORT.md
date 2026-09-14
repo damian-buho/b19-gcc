@@ -12,13 +12,6 @@ pf-cli-managed: yes
 Дякуємо, що користуєтеся **B19 / GCC**!
 Цей документ пояснює, де шукати допомогу та як ставити зрозумілі запитання.
 
-## Перш ніж питати
-
-Перегляньте це спершу — можливо, відповідь уже є:
-
-- [Issues на Codeberg](https://codeberg.org/b19/gcc/issues)
-- [Issues на GitHub](https://github.com/damian-buho/b19-gcc/issues)
-
 ## Куди звертатися
 
 - **Повідомити про вразливість безпеки** — [SECURITY.md](SECURITY.md)
