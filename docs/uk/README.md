@@ -58,6 +58,11 @@ pf-cli-managed: yes
 
 Див. [FEATURES.md](FEATURES.md), щоб переглянути повний перелік.
 
+## Що надає цей проєкт
+
+- **Образ контейнера** `ghcr.io/damian-buho/b19/gcc-16:latest`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/gcc-15:latest`
+
 ## Підтримувані платформи
 
 - `linux/amd64`
@@ -66,12 +71,38 @@ pf-cli-managed: yes
 
 ## Встановлення
 
+Завантажте опублікований образ контейнера:
+
+### Завантажити з GHCR
+
+```sh
+docker pull ghcr.io/damian-buho/b19/gcc-16:latest
+docker pull ghcr.io/damian-buho/b19/gcc-15:latest
+```
+
+Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
+
 Якщо наведені вище реєстри недоступні, завантажте з джерела:
+
+### Завантажити з Kiota
 
 ```sh
 docker pull kiota.ch/b19/gcc-16:latest
 docker pull kiota.ch/b19/gcc-15:latest
 ```
+
+## Використання
+
+Побудуйте на основі цього образу:
+
+### З GHCR
+
+```dockerfile
+FROM ghcr.io/damian-buho/b19/gcc-16:latest
+FROM ghcr.io/damian-buho/b19/gcc-15:latest
+```
+
+Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 
 ## Збирання
 

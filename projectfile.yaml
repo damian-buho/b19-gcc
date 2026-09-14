@@ -21,6 +21,7 @@ includes:
   - .makefile/b19/images/ubuntu.yaml
   - .makefile/b19/vulnerabilities/linux-libc-dev.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
+  - https://kiota.ch/damian-buho/metadata/raw/branch/main/ghcr.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/github.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
 keywords:
@@ -57,6 +58,20 @@ links:
     preferred: true
     type: source-code
     url: https://kiota.ch/b19/gcc
+  - derived: true
+    label:
+      en: Packages on GHCR
+      es: Paquetes en GHCR
+      uk: Пакунки на GHCR
+    type: package-registry
+    url: https://github.com/damian-buho/b19-gcc/pkgs/container/b19%2Fgcc-16
+  - derived: true
+    label:
+      en: Packages on GHCR
+      es: Paquetes en GHCR
+      uk: Пакунки на GHCR
+    type: package-registry
+    url: https://github.com/damian-buho/b19-gcc/pkgs/container/b19%2Fgcc-15
 org:
   b19:
     scaffold:
