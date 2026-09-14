@@ -44,6 +44,10 @@ org:
       compile-stage: compile-gcc
       root-stage: base
   projectfile:
+    architecture:
+      - amd64
+      - arm64
+      - riscv64
     attributes:
       shell:
         include:

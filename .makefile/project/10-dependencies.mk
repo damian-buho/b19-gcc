@@ -22,3 +22,12 @@ $(FETCH_PATH)/.sccache.0.14.0.arm64.stamp: .container/base/deps/sccache/arm64.ur
 
 PREREQUISITES += .container/base/deps/sccache/arm64.hash.deps
 
+$(FETCH_PATH)/.sccache.0.14.0.riscv64.stamp: .container/base/deps/sccache/riscv64.url.deps .container/base/deps/sccache/version.deps
+	M6E_DEPS_STAGE=base TARGETARCH=riscv64 .makefile/container/scripts/fetch.sh sccache
+	touch $@
+
+.container/base/deps/sccache/riscv64.hash.deps: $(FETCH_PATH)/.sccache.0.14.0.riscv64.stamp
+	M6E_DEPS_STAGE=base TARGETARCH=riscv64 .makefile/container/scripts/update-hash.sh sccache
+
+PREREQUISITES += .container/base/deps/sccache/riscv64.hash.deps
+

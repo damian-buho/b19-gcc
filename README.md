@@ -54,6 +54,12 @@ Community-maintained distribution of GCC based on B19/Ubuntu
 
 See [FEATURES.md](FEATURES.md) for the full list.
 
+## Supported platforms
+
+- `linux/amd64`
+- `linux/arm64`
+- `linux/riscv64`
+
 ## Installation
 
 If the registries above are unreachable, pull from the origin instead:
