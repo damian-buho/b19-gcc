@@ -30,6 +30,14 @@ keywords:
   - cpp
   - docker
 kind: SoftwareSourceCode
+links:
+  - label:
+      en: B19 / GCC on kiota.ch
+      es: B19 / GCC en kiota.ch
+      uk: B19 / GCC на kiota.ch
+    preferred: true
+    type: source-code
+    url: https://kiota.ch/b19/gcc
 org:
   b19:
     scaffold:
@@ -56,19 +64,11 @@ org:
         parents:
           - url: ssh://git@kiota.ch/b19/ubuntu.git
     status: maintained
-technologies:
-  - c
-  - cpp
-links:
-  - label:
-      en: B19 / GCC on kiota.ch
-      es: B19 / GCC en kiota.ch
-      uk: B19 / GCC на kiota.ch
-    preferred: true
-    type: source-code
-    url: https://kiota.ch/b19/gcc
 repositories:
   - branch: main
     role: origin
     type: git
     url: ssh://git@kiota.ch/b19/gcc.git
+technologies:
+  - c
+  - cpp
