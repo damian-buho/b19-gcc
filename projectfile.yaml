@@ -30,50 +30,6 @@ keywords:
   - cpp
   - docker
 kind: SoftwareSourceCode
-links:
-  - label:
-      en: B19/GCC on Codeberg
-      es: B19/GCC en Codeberg
-      uk: B19/GCC на Codeberg
-    tags:
-      - public
-      - badges
-      - badges-gitea
-    type: source-code
-    url: https://codeberg.org/b19/gcc
-  - label:
-      en: B19/GCC on GitHub
-      es: B19/GCC en GitHub
-      uk: B19/GCC на GitHub
-    tags:
-      - public
-      - badges
-      - badges-github
-    type: source-code
-    url: https://github.com/damian-buho/b19-gcc
-  - label:
-      en: B19/GCC on kiota.ch
-      es: B19/GCC en kiota.ch
-      uk: B19/GCC на kiota.ch
-    preferred: true
-    type: source-code
-    url: https://kiota.ch/b19/gcc
-  - label:
-      en: Issues on Codeberg
-      es: Incidencias en Codeberg
-      uk: Issues на Codeberg
-    tags:
-      - support
-    type: bugs
-    url: https://codeberg.org/b19/gcc/issues
-  - label:
-      en: Issues on GitHub
-      es: Incidencias en GitHub
-      uk: Issues на GitHub
-    tags:
-      - support
-    type: bugs
-    url: https://github.com/damian-buho/b19-gcc/issues
 org:
   b19:
     scaffold:
@@ -100,18 +56,19 @@ org:
         parents:
           - url: ssh://git@kiota.ch/b19/ubuntu.git
     status: maintained
+technologies:
+  - c
+  - cpp
+links:
+  - label:
+      en: B19 / GCC on kiota.ch
+      es: B19 / GCC en kiota.ch
+      uk: B19 / GCC на kiota.ch
+    preferred: true
+    type: source-code
+    url: https://kiota.ch/b19/gcc
 repositories:
-  - issues: true
-    role: mirror
-    type: git
-    url: ssh://git@codeberg.org/b19/gcc.git
-  - role: mirror
-    type: git
-    url: git@github.com:damian-buho/b19-gcc.git
   - branch: main
     role: origin
     type: git
     url: ssh://git@kiota.ch/b19/gcc.git
-technologies:
-  - c
-  - cpp
