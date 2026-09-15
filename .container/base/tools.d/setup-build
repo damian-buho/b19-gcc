@@ -94,6 +94,11 @@
       B19_COMPILE_CACHE=ccache
       export B19_COMPILE_CACHE
     fi
+    if [ "${B19_COMPILE_CACHE:-}" = "sccache" ] && ! sccache --version >/dev/null 2>&1; then
+      b19-log warn "BUILD" "$(_p "sccache binary cannot run on %s, switching to %s" "${TARGETARCH:-<unset>}" "ccache")"
+      B19_COMPILE_CACHE=ccache
+      export B19_COMPILE_CACHE
+    fi
 
     case "${B19_COMPILE_CACHE:-}" in
       sccache)

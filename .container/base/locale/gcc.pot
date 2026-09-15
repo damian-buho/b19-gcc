@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: gcc 1.1.6\n"
-"Report-Msgid-Bugs-To: https://codeberg.org/b19/gcc/issues\n"
-"POT-Creation-Date: 2026-09-07 03:45+0000\n"
+"Project-Id-Version: gcc 1.2.0\n"
+"Report-Msgid-Bugs-To: https://github.com/damian-buho/b19-gcc/issues\n"
+"POT-Creation-Date: 2026-09-15 20:20+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,31 +19,35 @@ msgstr ""
 msgid "sccache without a remote backend causes daemon races, switching to %s"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:108
-msgid "sccache local cache on tmpfs (%s), remote is persistent"
-msgstr ""
-
-#: .container/base/tools.d/setup-build:111
-msgid "sccache local cache on cache mount (%s)"
+#: .container/base/tools.d/setup-build:98
+msgid "sccache binary cannot run on %s, switching to %s"
 msgstr ""
 
 #: .container/base/tools.d/setup-build:113
+msgid "sccache local cache on tmpfs (%s), remote is persistent"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:116
+msgid "sccache local cache on cache mount (%s)"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:118
 msgid "Create sccache cache directory"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:119
+#: .container/base/tools.d/setup-build:124
 msgid "Create ccache cache directory"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:123
+#: .container/base/tools.d/setup-build:128
 msgid "Compile cache: ccache + remote (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:125
+#: .container/base/tools.d/setup-build:130
 msgid "Compile cache: ccache (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:132
+#: .container/base/tools.d/setup-build:137
 msgid "Compile cache: %s"
 msgstr ""
 
