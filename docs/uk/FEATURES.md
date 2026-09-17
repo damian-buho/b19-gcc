@@ -35,7 +35,7 @@ SPDX-License-Identifier: MIT
 - Постачається повний інструментальний ланцюжок збирання: gdb, valgrind, cmake, ninja-build, autoconf, automake, bison, flex, libtool, binutils, pkg-config і ccache.
 - Розв’язана версія GCC експортується для використання подальшими етапами збирання.
 
-## Успадковано від B19/Ubuntu
+## Успадковано від B19 / Ubuntu
 
 ### Постійний APT-кеш між збираннями
 

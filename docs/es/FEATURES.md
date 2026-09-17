@@ -35,7 +35,7 @@ SPDX-License-Identifier: MIT
 - Incluye una cadena de herramientas de compilación completa: gdb, valgrind, cmake, ninja-build, autoconf, automake, bison, flex, libtool, binutils, pkg-config y ccache.
 - La versión resuelta de GCC se exporta para que la consuman las etapas de compilación posteriores.
 
-## Heredado de B19/Ubuntu
+## Heredado de B19 / Ubuntu
 
 ### Caché APT persistente entre compilaciones
 
