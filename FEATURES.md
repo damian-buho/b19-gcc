@@ -33,7 +33,7 @@ SPDX-License-Identifier: MIT
 - Ships a complete build toolchain: gdb, valgrind, cmake, ninja-build, autoconf, automake, bison, flex, libtool, binutils, pkg-config, and ccache.
 - The resolved GCC version is exported for downstream build stages to consume.
 
-## Inherited from B19/Ubuntu
+## Inherited from B19 / Ubuntu
 
 ### Persistent APT cache across builds
 
