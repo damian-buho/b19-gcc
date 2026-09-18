@@ -22,9 +22,9 @@ includes:
   - .makefile/b19/traits/release.yaml
   - .makefile/b19/vulnerabilities/linux-libc-dev.yaml
   - https://kiota.ch/b19/metadata/raw/branch/main/include.yaml
-  - https://kiota.ch/damian-buho/metadata/raw/branch/main/registry/ghcr.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/forge/github.yaml
   - https://kiota.ch/damian-buho/metadata/raw/branch/main/include.yaml
+  - https://kiota.ch/damian-buho/metadata/raw/branch/main/registry/ghcr.yaml
 keywords:
   - gcc
   - compiler
@@ -38,6 +38,7 @@ links:
       en: B19 / GCC on GitHub
       es: B19 / GCC en GitHub
       uk: B19 / GCC на GitHub
+    priority: 80
     tags:
       - public
       - badges
@@ -48,6 +49,7 @@ links:
       en: Issues on GitHub
       es: Incidencias en GitHub
       uk: Задачі на GitHub
+    priority: 80
     tags:
       - support
     type: bugs
@@ -57,17 +59,16 @@ links:
       es: B19 / GCC en kiota.ch
       uk: B19 / GCC на kiota.ch
     preferred: true
+    priority: 10
     type: source-code
     url: https://kiota.ch/b19/gcc
-  - derived: true
-    label:
+  - label:
       en: Packages on GHCR
       es: Paquetes en GHCR
       uk: Пакунки на GHCR
     type: package-registry
     url: https://github.com/damian-buho/b19-gcc/pkgs/container/b19%2Fgcc-16
-  - derived: true
-    label:
+  - label:
       en: Packages on GHCR
       es: Paquetes en GHCR
       uk: Пакунки на GHCR
