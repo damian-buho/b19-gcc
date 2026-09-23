@@ -62,6 +62,8 @@ pf-cli-managed: yes
 
 - **Образ контейнера** `ghcr.io/damian-buho/b19/gcc-16:latest`
 - **Образ контейнера** `ghcr.io/damian-buho/b19/gcc-15:latest`
+- **Образ контейнера** `docker.io/damianbuho/b19-gcc-16:latest`
+- **Образ контейнера** `docker.io/damianbuho/b19-gcc-15:latest`
 
 ## Підтримувані платформи
 
@@ -78,6 +80,13 @@ pf-cli-managed: yes
 ```sh
 docker pull ghcr.io/damian-buho/b19/gcc-16:latest
 docker pull ghcr.io/damian-buho/b19/gcc-15:latest
+```
+
+### Завантажити з DockerHub
+
+```sh
+docker pull docker.io/damianbuho/b19-gcc-16:latest
+docker pull docker.io/damianbuho/b19-gcc-15:latest
 ```
 
 Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
@@ -100,6 +109,13 @@ docker pull kiota.ch/b19/gcc-15:latest
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/gcc-16:latest
 FROM ghcr.io/damian-buho/b19/gcc-15:latest
+```
+
+### З DockerHub
+
+```dockerfile
+FROM docker.io/damianbuho/b19-gcc-16:latest
+FROM docker.io/damianbuho/b19-gcc-15:latest
 ```
 
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).

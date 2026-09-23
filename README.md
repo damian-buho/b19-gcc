@@ -60,6 +60,8 @@ See [FEATURES.md](FEATURES.md) for the full list.
 
 - **Container image** `ghcr.io/damian-buho/b19/gcc-16:latest`
 - **Container image** `ghcr.io/damian-buho/b19/gcc-15:latest`
+- **Container image** `docker.io/damianbuho/b19-gcc-16:latest`
+- **Container image** `docker.io/damianbuho/b19-gcc-15:latest`
 
 ## Supported platforms
 
@@ -76,6 +78,13 @@ Pull the published container image:
 ```sh
 docker pull ghcr.io/damian-buho/b19/gcc-16:latest
 docker pull ghcr.io/damian-buho/b19/gcc-15:latest
+```
+
+### Pull from DockerHub
+
+```sh
+docker pull docker.io/damianbuho/b19-gcc-16:latest
+docker pull docker.io/damianbuho/b19-gcc-15:latest
 ```
 
 Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
@@ -98,6 +107,13 @@ Build on top of this image:
 ```dockerfile
 FROM ghcr.io/damian-buho/b19/gcc-16:latest
 FROM ghcr.io/damian-buho/b19/gcc-15:latest
+```
+
+### From DockerHub
+
+```dockerfile
+FROM docker.io/damianbuho/b19-gcc-16:latest
+FROM docker.io/damianbuho/b19-gcc-15:latest
 ```
 
 For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
