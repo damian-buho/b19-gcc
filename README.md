@@ -28,10 +28,10 @@ It also inherits the features of B19 / Ubuntu — see [Features](docs/FEATURES.m
 
 ## What this provides
 
-- **Container image** `ghcr.io/damian-buho/b19/gcc-16:latest`
-- **Container image** `ghcr.io/damian-buho/b19/gcc-15:latest`
-- **Container image** `damianbuho/b19-gcc-16:latest`
-- **Container image** `damianbuho/b19-gcc-15:latest`
+- **Container image** `ghcr.io/damian-buho/b19/gcc:16`
+- **Container image** `ghcr.io/damian-buho/b19/gcc:15`
+- **Container image** `damianbuho/b19-gcc:16`
+- **Container image** `damianbuho/b19-gcc:15`
 
 ## Installation
 
@@ -40,13 +40,13 @@ Pull the published container image:
 ### Pull from GHCR — linux/amd64, linux/arm64, linux/riscv64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/gcc-16:latest
+docker pull ghcr.io/damian-buho/b19/gcc:16
 ```
 
 ### Pull from DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-gcc-16:latest
+docker pull damianbuho/b19-gcc:16
 ```
 
 Series: `16` | `15`
@@ -58,7 +58,7 @@ If the registries above are unreachable, pull from the origin instead:
 ### Pull from Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/gcc-16:latest
+docker pull kiota.ch/b19/gcc:16
 ```
 
 Series: `16` | `15`
@@ -70,13 +70,13 @@ Build on top of this image:
 ### From GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/gcc-16:latest
+FROM ghcr.io/damian-buho/b19/gcc:16
 ```
 
 ### From DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-gcc-16:latest
+FROM damianbuho/b19-gcc:16
 ```
 
 Series: `16` | `15`

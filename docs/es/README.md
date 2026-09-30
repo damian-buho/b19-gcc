@@ -30,10 +30,10 @@ También hereda las características de B19 / Ubuntu; consulta [Características
 
 ## Qué entrega este proyecto
 
-- **Imagen de contenedor** `ghcr.io/damian-buho/b19/gcc-16:latest`
-- **Imagen de contenedor** `ghcr.io/damian-buho/b19/gcc-15:latest`
-- **Imagen de contenedor** `damianbuho/b19-gcc-16:latest`
-- **Imagen de contenedor** `damianbuho/b19-gcc-15:latest`
+- **Imagen de contenedor** `ghcr.io/damian-buho/b19/gcc:16`
+- **Imagen de contenedor** `ghcr.io/damian-buho/b19/gcc:15`
+- **Imagen de contenedor** `damianbuho/b19-gcc:16`
+- **Imagen de contenedor** `damianbuho/b19-gcc:15`
 
 ## Instalación
 
@@ -42,13 +42,13 @@ Descarga la imagen de contenedor publicada:
 ### Descargar de GHCR — linux/amd64, linux/arm64, linux/riscv64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/gcc-16:latest
+docker pull ghcr.io/damian-buho/b19/gcc:16
 ```
 
 ### Descargar de DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-gcc-16:latest
+docker pull damianbuho/b19-gcc:16
 ```
 
 Serie: `16` | `15`
@@ -60,7 +60,7 @@ Si los registros anteriores no están disponibles, descarga desde el origen:
 ### Descargar de Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/gcc-16:latest
+docker pull kiota.ch/b19/gcc:16
 ```
 
 Serie: `16` | `15`
@@ -72,13 +72,13 @@ Construye sobre esta imagen:
 ### Desde GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/gcc-16:latest
+FROM ghcr.io/damian-buho/b19/gcc:16
 ```
 
 ### Desde DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-gcc-16:latest
+FROM damianbuho/b19-gcc:16
 ```
 
 Serie: `16` | `15`
