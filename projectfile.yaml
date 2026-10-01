@@ -99,7 +99,6 @@ org:
         parts:
           - series
     ci:
-      image: b19/gcc-{B19_GCC_SERIES}
       matrix:
         axes:
           B19_GCC_SERIES:

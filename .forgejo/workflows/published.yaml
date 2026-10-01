@@ -75,7 +75,7 @@ jobs:
     env:
       B19_GCC_SERIES: ${{ matrix.B19_GCC_SERIES }}
       M6E_ARCH: ${{ matrix.M6E_ARCH }}
-      M6E_IMAGE_FULLNAME: b19/gcc-${{ matrix.B19_GCC_SERIES }}:${{ vars.BASE_IMAGE_DEFAULT_VERSION || 'latest' }}-${{ github.run_id }}-${{ matrix.M6E_ARCH }}
+      M6E_IMAGE_FULLNAME: b19/gcc:${{ vars.BASE_IMAGE_DEFAULT_VERSION || 'latest' }}-${{ github.run_id }}-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}
       M6E_COMPOSE_PROJECT_NAME: ci-b19-gcc-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}-${{ github.run_id }}-${{ github.run_attempt }}
       M6E_CONTAINER_INSTANCE: ci-b19-gcc-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}-${{ github.run_id }}-${{ github.run_attempt }}
     steps:
@@ -130,7 +130,7 @@ jobs:
       - if: ${{ always() }}
         uses: projectfile/actions/docker-cleanup@v1
         with:
-          image: b19/gcc-${{ matrix.B19_GCC_SERIES }}:${{ env.M6E_TAG }}-${{ github.run_id }}-${{ matrix.M6E_ARCH }}
+          image: b19/gcc:${{ env.M6E_TAG }}-${{ github.run_id }}-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}
           network: ci-b19-gcc-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}-${{ env.M6E_RUN_SCOPE }}-network
   container-ready-to-test:
     runs-on: docker
@@ -208,7 +208,7 @@ jobs:
         uses: projectfile/actions/container-build/buildah@v1
         with:
           artifact-name: image-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}-${{ github.run_id }}
-          image: b19/gcc-${{ matrix.B19_GCC_SERIES }}:${{ env.M6E_TAG }}-${{ github.run_id }}-${{ matrix.M6E_ARCH }}
+          image: b19/gcc:${{ env.M6E_TAG }}-${{ github.run_id }}-${{ matrix.B19_GCC_SERIES }}-${{ matrix.M6E_ARCH }}
           build-args: |-
             B19_COLOR=${{ inputs.B19_COLOR || vars.B19_COLOR || '1' }}
             B19_FETCH_DOCKER_CACHE=${{ inputs.B19_FETCH_DOCKER_CACHE || vars.B19_FETCH_DOCKER_CACHE || 'Y' }}
@@ -388,7 +388,7 @@ jobs:
             amd64 image-${{ matrix.B19_GCC_SERIES }}-amd64-${{ github.run_id }}
           # The arches this scope may publish, the same list the per-arch downloads above honour
           only-arches: ${{ vars.CI_ONLY_M6E_ARCH }}
-          image: b19/gcc-${{ matrix.B19_GCC_SERIES }}:${{ env.M6E_TAG }}-${{ github.run_id }}
+          image: b19/gcc:${{ env.M6E_TAG }}-${{ github.run_id }}-${{ matrix.B19_GCC_SERIES }}
           version: ${{ github.ref_name }}
           # The branch this run is on, empty on a tag. Non-empty collapses the cascade to
           # one `latest-<branch>` tag on the primary sink, so a branch build is testable
