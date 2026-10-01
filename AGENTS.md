@@ -12,10 +12,10 @@ GCC toolchain base image used as builder stage for compiled-from-source projects
 
 ## Key facts
 
-- Base: `b19/ubuntu/${B19_UBUNTU_SERIES}` (resolute by default)
+- Base: `b19/ubuntu:${B19_UBUNTU_SERIES}` (resolute by default)
 - GCC installed from Ubuntu apt (not compiled from source)
 - Series: 16, 15
-- Image name: `b19/gcc-{series}`
+- Image name: `b19/gcc:{series}`
 
 ## What it provides
 
