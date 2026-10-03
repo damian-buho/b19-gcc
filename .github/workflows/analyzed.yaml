@@ -34,7 +34,7 @@ jobs:
         B19_GCC_SERIES: ["16", "15"]
     env:
       B19_GCC_SERIES: ${{ matrix.B19_GCC_SERIES }}
-      M6E_IMAGE_PUBLISHED: ghcr.io/damian-buho/b19/gcc:${{ matrix.B19_GCC_SERIES }}
+      M6E_IMAGE_PUBLISHED: ghcr.io/damian-buho/b19/gcc:gcc${{ matrix.B19_GCC_SERIES }}
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
@@ -53,4 +53,4 @@ jobs:
           run: auto-dive
           env: |-
             B19_GCC_SERIES=${{ matrix.B19_GCC_SERIES }}
-            M6E_IMAGE_PUBLISHED=ghcr.io/damian-buho/b19/gcc:${{ matrix.B19_GCC_SERIES }}
+            M6E_IMAGE_PUBLISHED=ghcr.io/damian-buho/b19/gcc:gcc${{ matrix.B19_GCC_SERIES }}

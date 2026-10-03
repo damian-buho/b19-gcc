@@ -94,7 +94,7 @@ org:
       args:
         B19_GCC_SERIES: "16"
     image:
-      series: "{B19_GCC_SERIES}"
+      series: "gcc{B19_GCC_SERIES}"
       tag: ${series}
       variant:
         parts:
