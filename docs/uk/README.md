@@ -18,7 +18,7 @@ pf-cli-managed: yes
 
 [![Publish pipeline on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/published.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions) [![Vulnerability audit on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/audited.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions) [![Dependency freshness on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions) [![Analysis sweep on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
 
 ## Можливості
 
@@ -30,10 +30,10 @@ pf-cli-managed: yes
 
 ## Що надає цей проєкт
 
-- **Образ контейнера** `ghcr.io/damian-buho/b19/gcc:16`
-- **Образ контейнера** `ghcr.io/damian-buho/b19/gcc:15`
-- **Образ контейнера** `damianbuho/b19-gcc:16`
-- **Образ контейнера** `damianbuho/b19-gcc:15`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/gcc:gcc16`
+- **Образ контейнера** `ghcr.io/damian-buho/b19/gcc:gcc15`
+- **Образ контейнера** `damianbuho/b19-gcc:gcc16`
+- **Образ контейнера** `damianbuho/b19-gcc:gcc15`
 
 ## Встановлення
 
@@ -42,16 +42,16 @@ pf-cli-managed: yes
 ### Завантажити з GHCR — linux/amd64, linux/arm64, linux/riscv64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/gcc:16
+docker pull ghcr.io/damian-buho/b19/gcc:gcc16
 ```
 
 ### Завантажити з DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-gcc:16
+docker pull damianbuho/b19-gcc:gcc16
 ```
 
-Серія: `16` | `15`
+B19_GCC_SERIES: `16` | `15`
 
 Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
 
@@ -60,10 +60,10 @@ docker pull damianbuho/b19-gcc:16
 ### Завантажити з Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/gcc:16
+docker pull kiota.ch/b19/gcc:gcc16
 ```
 
-Серія: `16` | `15`
+B19_GCC_SERIES: `16` | `15`
 
 ## Використання
 
@@ -72,16 +72,16 @@ docker pull kiota.ch/b19/gcc:16
 ### З GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/gcc:16
+FROM ghcr.io/damian-buho/b19/gcc:gcc16
 ```
 
 ### З DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-gcc:16
+FROM damianbuho/b19-gcc:gcc16
 ```
 
-Серія: `16` | `15`
+B19_GCC_SERIES: `16` | `15`
 
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 

@@ -16,7 +16,7 @@ Community-maintained distribution of GCC built on B19/Ubuntu. This repository ho
 
 [![Publish pipeline on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/published.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions) [![Vulnerability audit on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/audited.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions) [![Dependency freshness on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions) [![Analysis sweep on GitHub](https://github.com/damian-buho/b19-gcc/actions/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://github.com/damian-buho/b19-gcc/actions)
 
-[![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyze.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
+[![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
 
 ## Features
 
@@ -28,10 +28,10 @@ It also inherits the features of B19 / Ubuntu — see [Features](docs/FEATURES.m
 
 ## What this provides
 
-- **Container image** `ghcr.io/damian-buho/b19/gcc:16`
-- **Container image** `ghcr.io/damian-buho/b19/gcc:15`
-- **Container image** `damianbuho/b19-gcc:16`
-- **Container image** `damianbuho/b19-gcc:15`
+- **Container image** `ghcr.io/damian-buho/b19/gcc:gcc16`
+- **Container image** `ghcr.io/damian-buho/b19/gcc:gcc15`
+- **Container image** `damianbuho/b19-gcc:gcc16`
+- **Container image** `damianbuho/b19-gcc:gcc15`
 
 ## Installation
 
@@ -40,16 +40,16 @@ Pull the published container image:
 ### Pull from GHCR — linux/amd64, linux/arm64, linux/riscv64
 
 ```sh
-docker pull ghcr.io/damian-buho/b19/gcc:16
+docker pull ghcr.io/damian-buho/b19/gcc:gcc16
 ```
 
 ### Pull from DockerHub — linux/amd64
 
 ```sh
-docker pull damianbuho/b19-gcc:16
+docker pull damianbuho/b19-gcc:gcc16
 ```
 
-Series: `16` | `15`
+B19_GCC_SERIES: `16` | `15`
 
 Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
 
@@ -58,10 +58,10 @@ If the registries above are unreachable, pull from the origin instead:
 ### Pull from Kiota — linux/amd64
 
 ```sh
-docker pull kiota.ch/b19/gcc:16
+docker pull kiota.ch/b19/gcc:gcc16
 ```
 
-Series: `16` | `15`
+B19_GCC_SERIES: `16` | `15`
 
 ## Usage
 
@@ -70,16 +70,16 @@ Build on top of this image:
 ### From GHCR
 
 ```dockerfile
-FROM ghcr.io/damian-buho/b19/gcc:16
+FROM ghcr.io/damian-buho/b19/gcc:gcc16
 ```
 
 ### From DockerHub
 
 ```dockerfile
-FROM damianbuho/b19-gcc:16
+FROM damianbuho/b19-gcc:gcc16
 ```
 
-Series: `16` | `15`
+B19_GCC_SERIES: `16` | `15`
 
 For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
 
