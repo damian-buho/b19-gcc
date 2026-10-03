@@ -49,7 +49,7 @@ docker pull ghcr.io/damian-buho/b19/gcc:gcc16
 docker pull damianbuho/b19-gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Series: `gcc16` | `gcc15`
 
 Stable releases also publish `X.Y.Z`, `X.Y` and `X` tags — pull the precision you want to pin.
 
@@ -61,7 +61,7 @@ If the registries above are unreachable, pull from the origin instead:
 docker pull kiota.ch/b19/gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Series: `gcc16` | `gcc15`
 
 ## Usage
 
@@ -79,7 +79,7 @@ FROM ghcr.io/damian-buho/b19/gcc:gcc16
 FROM damianbuho/b19-gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Series: `gcc16` | `gcc15`
 
 For the recommended multi-stage pattern and the build-hook system (build.d), scaffold a derivative with `b19/scripts/scaffold.sh` from [m6e/b19](https://kiota.ch/m6e/b19).
 

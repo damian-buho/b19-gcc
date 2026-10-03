@@ -51,7 +51,7 @@ docker pull ghcr.io/damian-buho/b19/gcc:gcc16
 docker pull damianbuho/b19-gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Serie: `gcc16` | `gcc15`
 
 Las versiones estables también publican las etiquetas `X.Y.Z`, `X.Y` y `X`: descarga el nivel de precisión que quieras fijar.
 
@@ -63,7 +63,7 @@ Si los registros anteriores no están disponibles, descarga desde el origen:
 docker pull kiota.ch/b19/gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Serie: `gcc16` | `gcc15`
 
 ## Uso
 
@@ -81,7 +81,7 @@ FROM ghcr.io/damian-buho/b19/gcc:gcc16
 FROM damianbuho/b19-gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Serie: `gcc16` | `gcc15`
 
 Para el patrón multietapa recomendado y el sistema de hooks de compilación (build.d), genera un derivado con `b19/scripts/scaffold.sh` de [m6e/b19](https://kiota.ch/m6e/b19).
 

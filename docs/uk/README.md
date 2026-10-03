@@ -51,7 +51,7 @@ docker pull ghcr.io/damian-buho/b19/gcc:gcc16
 docker pull damianbuho/b19-gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Серія: `gcc16` | `gcc15`
 
 Стабільні випуски також публікують теґи `X.Y.Z`, `X.Y` і `X` — завантажте той рівень точності, який хочете зафіксувати.
 
@@ -63,7 +63,7 @@ B19_GCC_SERIES: `16` | `15`
 docker pull kiota.ch/b19/gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Серія: `gcc16` | `gcc15`
 
 ## Використання
 
@@ -81,7 +81,7 @@ FROM ghcr.io/damian-buho/b19/gcc:gcc16
 FROM damianbuho/b19-gcc:gcc16
 ```
 
-B19_GCC_SERIES: `16` | `15`
+Серія: `gcc16` | `gcc15`
 
 Для рекомендованого багатоетапного шаблону та системи хуків збірки (build.d) створіть похідний проєкт за допомогою `b19/scripts/scaffold.sh` з [m6e/b19](https://kiota.ch/m6e/b19).
 
