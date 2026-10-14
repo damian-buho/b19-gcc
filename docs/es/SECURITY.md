@@ -298,6 +298,7 @@ aplica a este proyecto):
 | CVE-2026-31589 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-54518 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-40190 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2022-50240 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2025-10263 | unfixable kernel headers in linux-libc-dev (no fix published) |
 
 <!-- textlint-enable -->
