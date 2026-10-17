@@ -29,8 +29,8 @@ keywords:
   - gcc
   - compiler
   - toolchain
-  - c
-  - cpp
-  - docker
+  - cmake
+  - sccache
+  - build-essential
 version: 0.8.8
 date-released: "2026-10-15"
