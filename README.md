@@ -8,7 +8,7 @@ pf-cli-managed: yes
 
 # B19 / GCC
 
-Community-maintained distribution of GCC built on B19/Ubuntu. This repository holds only the packaging — Dockerfile, build scripts, and configuration, all MIT-licensed; the upstream GCC is fetched at build time and retains its own licensing.
+GCC toolchain with sccache, the mold linker and per-arch tuned flags, plus gdb, cmake, ninja and valgrind.
 
 [![Stand with Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/badges/StandWithUkraine.svg)](https://damian-buho.github.io/support-ukraine/) [![Projectfile inside](https://badges.kiota.ch/static/v1?label=projectfile&message=inside&labelColor=0d0d0d&color=8c6723&style=flat-square)](https://projectfile.org) [![License](https://badges.kiota.ch/static/v1?label=license&message=MIT&color=1e5913&style=flat-square)](LICENSE) [![PRs welcome](https://badges.kiota.ch/static/v1?label=PRs&message=welcome&color=1e5913&style=flat-square)](CONTRIBUTING.md) [![REUSE compliance](https://api.reuse.software/badge/github.com/damian-buho/b19-gcc)](https://api.reuse.software/info/github.com/damian-buho/b19-gcc)
 
