@@ -108,6 +108,7 @@ depends on an upstream release, or the advisory does not apply to this project):
 | CVE-2026-74334 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-74317 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-74268 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72497 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72478 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72472 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72462 | unfixable kernel headers in linux-libc-dev (no fix published) |
@@ -118,6 +119,7 @@ depends on an upstream release, or the advisory does not apply to this project):
 | CVE-2026-72331 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72288 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72287 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-72198 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72195 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72151 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-72135 | unfixable kernel headers in linux-libc-dev (no fix published) |
@@ -149,6 +151,7 @@ depends on an upstream release, or the advisory does not apply to this project):
 | CVE-2026-68147 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-68121 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-68117 | unfixable kernel headers in linux-libc-dev (no fix published) |
+| CVE-2026-68103 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-68098 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-68085 | unfixable kernel headers in linux-libc-dev (no fix published) |
 | CVE-2026-64601 | unfixable kernel headers in linux-libc-dev (no fix published) |
