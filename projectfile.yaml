@@ -15,7 +15,7 @@ identity:
     en: GCC toolchain with sccache, the mold linker and per-arch tuned flags, plus gdb, cmake, ninja and valgrind.
     es: Cadena GCC con sccache, enlazador mold y flags por arquitectura, más gdb, cmake, ninja y valgrind.
     uk: Інструментарій GCC із sccache, лінкером mold і прапорами під архітектуру, плюс gdb, cmake, ninja та valgrind.
-  version: 0.8.13
+  version: 0.8.14
   released: "2026-10-21"
   visibility: public
 includes:
