@@ -20,6 +20,11 @@ Cadena GCC con sccache, enlazador mold y flags por arquitectura, más gdb, cmake
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
 
+## Proyecto original
+
+Este proyecto empaqueta [GCC](https://gcc.gnu.org) (`GPL-3.0-or-later WITH GCC-exception-3.1`).
+Gracias a: Free Software Foundation y los colaboradores de GCC
+
 ## Características
 
 - Flags de optimización específicos de cada arquitectura con sondeo en tiempo de compilación
@@ -123,11 +128,6 @@ Puntos de entrada de la canalización:
 ## Enlaces
 
 - [Especificación de Projectfile](https://projectfile.org)
-
-## Proyecto original
-
-Este proyecto empaqueta [GCC](https://gcc.gnu.org) (`GPL-3.0-or-later WITH GCC-exception-3.1`).
-Gracias a: The GNU Project
 
 ## Licencia
 

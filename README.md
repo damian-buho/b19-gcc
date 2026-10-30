@@ -18,6 +18,11 @@ GCC toolchain with sccache, the mold linker and per-arch tuned flags, plus gdb, 
 
 [![Publish pipeline on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/published.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Vulnerability audit on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/audited.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Dependency freshness on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/check-outdated.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions) [![Analysis sweep on kiota.ch](https://kiota.ch/b19/gcc/badges/workflows/analyzed.yaml/badge.svg?style=flat-square)](https://kiota.ch/b19/gcc/actions)
 
+## Upstream
+
+This project packages [GCC](https://gcc.gnu.org) (`GPL-3.0-or-later WITH GCC-exception-3.1`).
+Thanks to: Free Software Foundation and the GCC contributors
+
 ## Features
 
 - Architecture-specific optimization flags with compile-time probing
@@ -121,11 +126,6 @@ Pipeline entry points:
 ## Links
 
 - [Projectfile Specification](https://projectfile.org)
-
-## Upstream
-
-This project packages [GCC](https://gcc.gnu.org) (`GPL-3.0-or-later WITH GCC-exception-3.1`).
-Thanks to: The GNU Project
 
 ## License
 

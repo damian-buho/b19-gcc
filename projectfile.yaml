@@ -123,7 +123,10 @@ technologies:
   - c
   - cpp
 upstream:
-  - authors: The GNU Project
+  - authors:
+      en: Free Software Foundation and the GCC contributors
+      es: Free Software Foundation y los colaboradores de GCC
+      uk: Free Software Foundation та учасники GCC
     license: GPL-3.0-or-later WITH GCC-exception-3.1
     name: GCC
     url: https://gcc.gnu.org
