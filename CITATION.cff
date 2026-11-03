@@ -32,5 +32,5 @@ keywords:
   - cmake
   - sccache
   - build-essential
-version: 0.8.18
-date-released: "2026-10-31"
+version: 0.8.19
+date-released: "2026-11-03"
