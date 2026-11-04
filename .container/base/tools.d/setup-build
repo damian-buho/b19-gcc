@@ -8,12 +8,13 @@
 
     # Default RATIO value if not set
     RATIO="${B19_BUILD_PROC_RATIO:-0.8}"
-    # Calculate the number of jobs based on nproc and RATIO
-    # Ensure integer division and handle edge cases
-    CPU_COUNT=$(nproc)
+    # Size jobs from the detected CPU count and RATIO.
+    # shellcheck source=/dev/null
+    . detect-cpu-count
+    CPU_COUNT="${NUMPROCS}"
     JOBS=$(awk -v cpus="${CPU_COUNT}" -v ratio="${RATIO}" 'BEGIN {
       jobs = int(cpus * ratio);
-      if (jobs < 1) jobs = 1; # Ensure at least 1 job
+      if (jobs < 2) jobs = (cpus < 2) ? 1 : 2; # Two jobs once two CPUs exist
       print jobs;
     }')
 
