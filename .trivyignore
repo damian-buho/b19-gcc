@@ -8,298 +8,1182 @@
 # direct edits here are overwritten on the next generation.
 # pf-cli-managed: yes
 
+# android: binder: stop saving a pointer to the VMA
+# https://nvd.nist.gov/vuln/detail/CVE-2022-50240
 CVE-2022-50240
+
+# ext4: guard against EA inode refcount underflow in xattr update
+# https://nvd.nist.gov/vuln/detail/CVE-2025-40190
 CVE-2025-40190
-CVE-2026-100074
+
+# drm/amdgpu: reject mapping a reserved doorbell to a new queue
+# https://nvd.nist.gov/vuln/detail/CVE-2026-68103
 CVE-2026-68103
+
+# s390/zcrypt: Validate length for CCA ECC private key requests
+# https://nvd.nist.gov/vuln/detail/CVE-2026-68451
 CVE-2026-68451
+
+# ntfs: reject non-resident records for resident-only attributes
+# https://nvd.nist.gov/vuln/detail/CVE-2026-72198
 CVE-2026-72198
+
+# RDMA/bnxt_re: Add a max slot check for SQ
+# https://nvd.nist.gov/vuln/detail/CVE-2026-72497
 CVE-2026-72497
+
+# drm/amdkfd: hold event_mutex while checkpointing CRIU events
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74446
 CVE-2026-74446
+
+# drm/vc4: Supply the overflow slot size in BPOS, not the whole bin BO size
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74454
 CVE-2026-74454
+
+# net: openvswitch: fix potential UAF on meter attach failure
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74465
 CVE-2026-74465
+
+# scsi: scsi_debug: Fix REPORT ZONES alloc_len underflow OOB write
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74470
 CVE-2026-74470
+
+# afs: Fix UAF when sending a message
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74506
 CVE-2026-74506
+
+# Bluetooth: mgmt: fix UAF in pair command cancellation
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74510
 CVE-2026-74510
+
+# ksmbd: fix use-after-free in __close_file_table_ids()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74522
 CVE-2026-74522
+
+# Bluetooth: hci_sync: hold conn in hci_connect_pa_sync() callback
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74529
 CVE-2026-74529
+
+# Bluetooth: hci_sync: hold conn in hci_connect_big_sync() callback
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74530
 CVE-2026-74530
+
+# Bluetooth: ISO: fix race of kfree vs kref_get_unless_zero
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74533
 CVE-2026-74533
+
+# Bluetooth: ISO: fix refcounting of iso_conn
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74534
 CVE-2026-74534
+
+# Bluetooth: ISO: avoid deadlocks in iso_sock_timeout
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74535
 CVE-2026-74535
+
+# Bluetooth: ISO: hold sk properly in iso_conn_ready
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74537
 CVE-2026-74537
+
+# netfilter: nf_tables: make nft_object rhltable per table
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74565
 CVE-2026-74565
+
+# crypto: algif_skcipher - force synchronous processing on trees without ctx->state
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74578
 CVE-2026-74578
+
+# net: usb: ipheth: fix carrier_work UAF on disconnect
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74677
 CVE-2026-74677
+
+# net: tap: set skb->dev before parsing virtio net header in tap_get_user_xdp()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74684
 CVE-2026-74684
+
+# net/sched: cls_api: Always acquire rtnl_lock when destroying locked classifiers
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74700
 CVE-2026-74700
+
+# bpf: tcp: Fix use-after-free in bpf_iter_tcp_established_batch()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74714
 CVE-2026-74714
+
+# bpf: Fix netns reference imbalance in conntrack kfuncs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74715
 CVE-2026-74715
+
+# btrfs: lzo: reject inline extents without valid headers
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74723
 CVE-2026-74723
+
+# ipvs: avoid out-of-bounds write in ip_vs_nat_icmp
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74724
 CVE-2026-74724
+
+# ipvlan: inherit needed_headroom and needed_tailroom from phy_dev
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74744
 CVE-2026-74744
+
+# sctp: validate cookie AUTH state before use
+# https://nvd.nist.gov/vuln/detail/CVE-2026-74752
 CVE-2026-74752
+
+# s390/vfio_ccw: Ensure first IDAW remains constant
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80551
 CVE-2026-80551
+
+# s390/vfio_ccw: Limit the number of channel program segments
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80554
 CVE-2026-80554
+
+# vxlan: re-fetch eth header after route_shortcircuit()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80681
 CVE-2026-80681
+
+# Bluetooth: SCO: give the socket its own sco_conn reference
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80683
 CVE-2026-80683
+
+# scsi: target: iblock: Fix wrong PR ops NULL check for PREEMPT/RELEASE
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80691
 CVE-2026-80691
+
+# Bluetooth: hci_sync: hold conn in hci_connect_acl/le_sync() callbacks
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80692
 CVE-2026-80692
+
+# idpf: bound interrupt-vector register fill to the allocated array
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80693
 CVE-2026-80693
+
+# drm/vmwgfx: validate external BO copy bounds for both stride paths
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80700
 CVE-2026-80700
+
+# drm/vmwgfx: fix guest_memory_dirty bitfield clobbered as size
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80702
 CVE-2026-80702
+
+# s390/dasd: Fix undersized format-check buffer
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80710
 CVE-2026-80710
+
+# ipvs: do not propagate one-packet flag to synced conns
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80714
 CVE-2026-80714
+
+# ALSA: pcm: wake linked drain waiters on unlink
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80716
 CVE-2026-80716
+
+# mm/percpu-km: fix bitmap overflow and accounting in pcpu_create_chunk()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80718
 CVE-2026-80718
+
+# Bluetooth: ISO: ensure no dangling hcon references in iso_conn
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80721
 CVE-2026-80721
+
+# netfilter: nf_tables: don't queue packet path object notifications
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80837
 CVE-2026-80837
+
+# net/packet: defer vmalloc TX_RING free until skbs finish
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80841
 CVE-2026-80841
+
+# tls: device: fix out-of-bounds write in tls_append_frag()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80852
 CVE-2026-80852
+
+# RDMA/rxe: Fix responder UAF on IB_QP_MAX_DEST_RD_ATOMIC modify_qp
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80864
 CVE-2026-80864
+
+# KVM: s390: pci: Validate AIBV and AISB before pinning guest pages
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80891
 CVE-2026-80891
+
+# net: tap: fix wrong transport_header when sending VLAN-tagged frame
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80905
 CVE-2026-80905
+
+# wifi: mt76: mt7915: bound the device EEPROM address before the EFUSE copy
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80937
 CVE-2026-80937
+
+# net/smc: stop killed, freed and out_of_sync sharing a byte
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80980
 CVE-2026-80980
+
+# net/smc: fix use-after-free in smc_rx_pipe_buf_release()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80982
 CVE-2026-80982
+
+# net: ravb: serialize PTP clock teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-80991
 CVE-2026-80991
+
+# iommu/vt-d: Force requesting ACS when tboot is enabled
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89448
 CVE-2026-89448
+
+# nvme-tcp: fix host memory disclosure on R2T for a read command
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89481
 CVE-2026-89481
+
+# ocfs2: validate directory-index entry counts when reading metadata
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89492
 CVE-2026-89492
+
+# sched/core: Make core-sched flips wait for in-flight selections
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89520
 CVE-2026-89520
+
+# svcrdma: Validate Read chunk positions before reconstruction
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89526
 CVE-2026-89526
+
+# svcrdma: Reject Read lists that exceed the page budget
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89528
 CVE-2026-89528
+
+# svcrdma: Reject inline replies that overflow the pull-up buffer
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89530
 CVE-2026-89530
+
+# svcrdma: Reject connection when transport allocation fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89531
 CVE-2026-89531
+
+# SUNRPC: Reject short RFC 4121 MIC tokens in gss_krb5_verify_mic_v2
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89537
 CVE-2026-89537
+
+# SUNRPC: fix gssx_dec_option_array error path bugs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89544
 CVE-2026-89544
+
+# SUNRPC: svcauth_gss: enforce krb5 token minimum length
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89550
 CVE-2026-89550
+
+# ip: orphan prefetched skbs before multicast forwarding
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89564
 CVE-2026-89564
+
+# ipip: fix skb leak in collect_md mode when metadata_dst allocation fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89565
 CVE-2026-89565
+
+# bpf: Disable preemption in __bpf_get_stack
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89580
 CVE-2026-89580
+
+# HID: mcp2221: clear rxbuf after I2C/SMBus transfer completes
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89622
 CVE-2026-89622
+
+# smb: client: reject a tree connect response whose byte count is too small
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89631
 CVE-2026-89631
+
+# smb: client: fix OOB read/write from unvalidated DataOffset in coalesce_t2()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89633
 CVE-2026-89633
+
+# smb: client: fix UAF and buffer leak in cifs_check_trans2() for malformed secondary T2
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89637
 CVE-2026-89637
+
+# smb: client: clear setuid/setgid bit on write with cifsacl/modefromsid/posix extensions
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89638
 CVE-2026-89638
+
+# ceph: bound copied dentry name length in NFS export get_name
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89652
 CVE-2026-89652
+
+# NFSD: Prevent client use-after-free during delegation revoke
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89659
 CVE-2026-89659
+
+# nfsd: fix UAF in async copy cancel and shutdown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89675
 CVE-2026-89675
+
+# nfsd: fix stale s2s_cp_stateids IDR entry for async COPY
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89676
 CVE-2026-89676
+
+# nfsd: fix nfsd_file leak on inter-server COPY setup failure
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89680
 CVE-2026-89680
+
+# nfsd: fix clock domain mismatch in clients_still_reclaiming()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89685
 CVE-2026-89685
+
+# nfsd: release path refs on follow_down() error
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89707
 CVE-2026-89707
+
+# nfsd: RCU-protect cl_cb_session to fix use-after-free on session teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89708
 CVE-2026-89708
+
+# ksmbd: fix tree connection use-after-free in smb2_tree_connect()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89788
 CVE-2026-89788
+
+# drm/nouveau: unsubscribe the channel-kill event before the fence context
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89803
 CVE-2026-89803
+
+# drm/pagemap: Fix folio allocation fallback and use-after-put
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89805
 CVE-2026-89805
+
+# drm/amdkfd: Fix error path at svm_migrate_copy_to_ram
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89810
 CVE-2026-89810
+
+# f2fs: fix dentry folio leak in find_in_level
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89837
 CVE-2026-89837
+
+# LoongArch: KVM: Validate MSI data before routing it to EIOINTC
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89907
 CVE-2026-89907
+
+# KVM: arm64: vgic-v3: take an LPI reference in vgic_v3_save_pending_tables
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89913
 CVE-2026-89913
+
+# KVM: s390: Take srcu when importing watchpoint data
+# https://nvd.nist.gov/vuln/detail/CVE-2026-89922
 CVE-2026-89922
+
+# futex: Prevent rcuwait use-after-free during requeue PI
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90003
 CVE-2026-90003
+
+# NFSD: Prevent client use-after-free during close_lru reaping
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90037
 CVE-2026-90037
+
+# fs/ntfs3: fix slab-out-of-bounds write in ni_create_attr_list()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90048
 CVE-2026-90048
+
+# slip: remove slip_hangup() to fix use-after-free in slip_receive_buf()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90057
 CVE-2026-90057
+
+# Bluetooth: L2CAP: reject accept queue add unless BT_LISTEN
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90092
 CVE-2026-90092
+
+# Bluetooth: L2CAP: access chan->conn safely in get/setsockopt
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90093
 CVE-2026-90093
+
+# NFSv4.1: zero referring call lists before decoding
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90104
 CVE-2026-90104
+
+# net/smc: free stashed qentry before overwrite in REQ_ADD_LINK to ADD_LINK transition
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90108
 CVE-2026-90108
+
+# ip6mr: do not clone dst in ip6mr_cache_report()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90111
 CVE-2026-90111
+
+# NFSv4: Fix incorrect argument passed to nfs4_delete_lease() in nfs4_add_lease()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90148
 CVE-2026-90148
+
+# NFSv4/flexfiles: fix NULL dereference for NFSv4.0 data servers
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90149
 CVE-2026-90149
+
+# pnfs/blocklayout: Fix device leaks on parse failure
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90150
 CVE-2026-90150
+
+# smb/server: fix session leak in ksmbd_session_register()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90152
 CVE-2026-90152
+
+# ksmbd: detach blocked lock requests before freeing
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90155
 CVE-2026-90155
+
+# erofs: fix interlaced ztailpacking pclusters
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90161
 CVE-2026-90161
+
+# ksmbd: defer publishing granted locks to prevent UAF/double-free race
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90162
 CVE-2026-90162
+
+# ksmbd: serialize oplock close with pending break ownership
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90167
 CVE-2026-90167
+
+# ksmbd: free preauth sessions on connection teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90169
 CVE-2026-90169
+
+# fs/ntfs3: reject out-of-range evcn in mi_enum_attr()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90199
 CVE-2026-90199
+
+# fs/ntfs3: fix integer overflow in MFT cluster validation
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90200
 CVE-2026-90200
+
+# ocfs2: validate DIO orphan slot during inode read
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90204
 CVE-2026-90204
+
+# ocfs2: validate orphan slot during inode read
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90205
 CVE-2026-90205
+
+# bpf: Compare iterator types during state pruning
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90217
 CVE-2026-90217
+
+# nvme/ioctl: check SUBMIT_IO with nvme_cmd_allowed()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90227
 CVE-2026-90227
+
+# netfilter: nft_ct: move custom expectation support to helper
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90237
 CVE-2026-90237
+
+# Bluetooth: L2CAP: use proto_lock for l2cap_data to fix l2cap_disconn_ind
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90256
 CVE-2026-90256
+
+# bpf, cgroup: Fix invalid storage access after __cgroup_bpf_attach failed
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90313
 CVE-2026-90313
+
+# bpf: Invalidate RCU pointers after final spin unlock
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90317
 CVE-2026-90317
+
+# ocfs2: validate external xattr entries when reading metadata
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90320
 CVE-2026-90320
+
+# ocfs2: validate inline xattrs during inode block validation
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90321
 CVE-2026-90321
+
+# ublk: check import_ubuf() return value
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90324
 CVE-2026-90324
+
+# wifi: cfg80211: stop PMSR before P2P and NAN teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90343
 CVE-2026-90343
+
+# wifi: mt76: fix non-AQL packet accounting for MLO stations
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90375
 CVE-2026-90375
+
+# wifi: mt76: mt792x: fix use-after-free in mt76_rx_poll_complete
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90380
 CVE-2026-90380
+
+# bpf: Fix potential UAF when reading bpf link info
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90392
 CVE-2026-90392
+
+# wifi: ath11k: fix stride mismatch in mac_phy_caps_parse()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90398
 CVE-2026-90398
+
+# RDMA/cxgb4: Fix dereg_skb leak and double free in write_tpt_entry()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-90417
 CVE-2026-90417
+
+# ext4: validate readdir offset before accessing dirent
+# https://nvd.nist.gov/vuln/detail/CVE-2026-92499
 CVE-2026-92499
+
+# RDMA/core: Fix potential use after free in ib_dealloc_pd_user()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-92507
 CVE-2026-92507
+
+# RDMA/core: Fix potential use after free in counter_release()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-92509
 CVE-2026-92509
+
+# RDMA/core: Fix potential use after free in ib_destroy_srq_user()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-92510
 CVE-2026-92510
+
+# RDMA/core: Fix potential use after free in ib_destroy_cq_user()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-92511
 CVE-2026-92511
+
+# RDMA/core: Fix use after free in ib_query_qp()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-92512
 CVE-2026-92512
+
+# esp: do not unref managed frag pages in esp_ssg_unref()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93105
 CVE-2026-93105
+
+# bpf: Reject rdonly/rdwr_buf_size kfunc arguments that exceed u32 max
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93125
 CVE-2026-93125
+
+# bpf: Reject writes through untrusted BTF pointers
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93144
 CVE-2026-93144
+
+# bpf: Reject MEM_ALLOC BTF accesses past object bounds
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93148
 CVE-2026-93148
+
+# RDMA/irdma: Add refcounting to user ring MRs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93154
 CVE-2026-93154
+
+# drm/amd/display: Fix dangling pointer in CRTC reset function
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93175
 CVE-2026-93175
+
+# drm/amd/display: Fix dangling pointer in plane reset function
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93176
 CVE-2026-93176
+
+# drm/v3d: Clear queue->active_job when v3d_fence_create() fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93192
 CVE-2026-93192
+
+# nvdimm: virtio_pmem: refcount requests for token lifetime
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93196
 CVE-2026-93196
+
+# i3c: master: Do not treat master device as a duplicate target
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93199
 CVE-2026-93199
+
+# smb: client: harden DFS cache against invalid target hints
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93210
 CVE-2026-93210
+
+# nfsd: convert nfsd_net boolean flags to unsigned long flags word
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93221
 CVE-2026-93221
+
+# ksmbd: fix maximum allowed access checks
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93282
 CVE-2026-93282
+
+# smb: client: bound dirent name against end of SMB response in cifs_filldir
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93787
 CVE-2026-93787
+
+# wifi: iwlwifi: mvm: fix out-of-bounds tid_data access in BA notif
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93790
 CVE-2026-93790
+
+# wifi: iwlwifi: mvm: fix a possible underflow
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93792
 CVE-2026-93792
+
+# wifi: iwlwifi: pcie: null RX pointers after free
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93796
 CVE-2026-93796
+
+# wifi: cfg80211: validate assoc response length before status and IE access
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93806
 CVE-2026-93806
+
+# perf: Fix addr_filter_ranges lifetime
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93817
 CVE-2026-93817
+
+# tls: reject the combination of TLS and sockmap
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93824
 CVE-2026-93824
+
+# exfat: fix handling of damaged volume in exfat_create_upcase_table()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-93828
 CVE-2026-93828
+
+# btrfs: tree-checker: validate names in ROOT_REF and ROOT_BACKREF
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97415
 CVE-2026-97415
+
+# drm/amdkfd: fix UAF race in destroy_queue_cpsch
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97429
 CVE-2026-97429
+
+# wifi: ath11k: fix invalid data access in ath11k_dp_rx_h_undecap_nwifi
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97442
 CVE-2026-97442
+
+# drm/amdgpu: Bound GPIO I2C table entry count from VBIOS
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97493
 CVE-2026-97493
+
+# drm/amdkfd: Check bounds for allocate_sdma_queue restore_sdma_id
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97497
 CVE-2026-97497
+
+# media: chips-media: wave5: Release m2m_ctx after Instance Removed from List
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97513
 CVE-2026-97513
+
+# scsi: qla2xxx: Fix soft lockup polling continuation IOCB signature
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97530
 CVE-2026-97530
+
+# smb: client: fix heap overflow in DACL owner/group rewrite
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97555
 CVE-2026-97555
+
+# smb: client: avoid leaking refcount in cifs_queue_oplock_break()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97557
 CVE-2026-97557
+
+# smb: client: pin DFS superblock in iterator callback
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97562
 CVE-2026-97562
+
+# smb: client: reject userspace cifs.idmap descriptions
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97564
 CVE-2026-97564
+
+# smb: client: reject short READ responses in CIFSSMBRead()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97565
 CVE-2026-97565
+
+# media: verisilicon: hantro: bound G2 HEVC tile loop to the buffer capacity
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97581
 CVE-2026-97581
+
+# idpf: disable DIM work before freeing q_vectors
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97603
 CVE-2026-97603
+
+# net: bridge: use option bits for CFM/MRP frame handlers
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97615
 CVE-2026-97615
+
+# bootconfig: Fix integer overflow in initrd size check
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97906
 CVE-2026-97906
+
+# perf/x86/intel: Prevent drain_pebs() reentry
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97960
 CVE-2026-97960
+
+# vhost: invalidate vring access on IOTLB transitions
+# https://nvd.nist.gov/vuln/detail/CVE-2026-97988
 CVE-2026-97988
+
+# net/sched: defer qdisc freeing after failed creation
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98017
 CVE-2026-98017
+
+# bpf: mark a NULL call argument precise
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98019
 CVE-2026-98019
+
+# bpf: Preserve inner map identity in callback frames
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98033
 CVE-2026-98033
+
+# bpf: Mark NULL kptr stores precise
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98034
 CVE-2026-98034
+
+# bpf: Don't predict JMP32 pointer vs zero comparisons
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98041
 CVE-2026-98041
+
+# nvme: remove stale namespaces by NSID range during scan
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98056
 CVE-2026-98056
+
+# bpf: backtracking shouldn't clear outer frame R1-R5 for callbacks
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98084
 CVE-2026-98084
+
+# bpf: backtrack_insn(): Handle ld_{abs,ind} subprog exit edge
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98085
 CVE-2026-98085
+
+# net/sched: cls_u32: fix duplicate handle when node ID pool is exhausted
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98104
 CVE-2026-98104
+
+# Bluetooth: L2CAP: fix out-of-bounds write in l2cap_ecred_connect
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98107
 CVE-2026-98107
+
+# ksmbd: safely drain sessions during logoff
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98115
 CVE-2026-98115
+
+# bpf: check_cond_jmp_op(): properly infer if register is null
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98134
 CVE-2026-98134
+
+# KVM: x86/mmu: Check write tracking in all address spaces
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98164
 CVE-2026-98164
+
+# smb: client: fix server->total_read for compound encrypted PDUs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98167
 CVE-2026-98167
+
+# smb: client: fix next_buffer UAF and NextCommand bounds in compound PDUs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98171
 CVE-2026-98171
+
+# KEYS: encrypted: fix integer overflow of datablob_len
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98222
 CVE-2026-98222
+
+# xfrm: save input state data before secpath resets
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98229
 CVE-2026-98229
+
+# exec: Cleanup POSIX timers right after de_thread()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98260
 CVE-2026-98260
+
+# KVM: PPC: Book3S HV: fix use-after-free in kvmhv_emulate_tlbie_all_lpid()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98283
 CVE-2026-98283
+
+# wifi: mac80211: only operate on TDLS peers in the TDLS code
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98332
 CVE-2026-98332
+
+# wifi: mac80211: reset the LED state when ifup fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98333
 CVE-2026-98333
+
+# wifi: cfg80211: don't free driver-owned scan requests
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98341
 CVE-2026-98341
+
+# RDMA/core: Reject unregistering netdevs in ib_get_eth_speed
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98359
 CVE-2026-98359
+
+# xfrm: hold net_device reference under RCU in bundle creation
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98364
 CVE-2026-98364
+
+# RDMA/rxe: Fix integer overflow in mr_check_range() leading to OOB access
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98365
 CVE-2026-98365
+
+# bpf: Use array_map_meta_equal for percpu array inner map replacement
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98376
 CVE-2026-98376
+
+# ksmbd: follow SMB2 session expiration semantics
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98420
 CVE-2026-98420
+
+# ipv4: free inet_opt and ireq_opt after an RCU grace period
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98432
 CVE-2026-98432
+
+# smb/server: cancel async requests when closing connection
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98439
 CVE-2026-98439
+
+# KVM: arm64: nv: Delay freeing of shadow S2 structures until VM destruction
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98440
 CVE-2026-98440
+
+# net/sched: act_ct: avoid modifying shared unconfirmed ct entry
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98441
 CVE-2026-98441
+
+# net/sched: act_ct: fix helper UAF due to extensions realloc
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98442
 CVE-2026-98442
+
+# xfs: don't let hidden_space go negative in xfs_metafile_resv_init
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98446
 CVE-2026-98446
+
+# smb: client: fix create context out-of-bounds reads
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98454
 CVE-2026-98454
+
+# Bluetooth: mgmt: fix race in read_unconf_index_list()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98456
 CVE-2026-98456
+
+# Bluetooth: L2CAP: validate frame length before control and FCS access
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98457
 CVE-2026-98457
+
+# Bluetooth: ISO: balance the parent hold in hci_bind_bis()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98459
 CVE-2026-98459
+
+# Bluetooth: hci_conn: fix CIS hold ownership on reuse
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98462
 CVE-2026-98462
+
+# RISC-V: KVM: Synchronize hrtimer callback during teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98464
 CVE-2026-98464
+
+# scsi: libiscsi_tcp: Check the data direction of a Data-In PDU
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98479
 CVE-2026-98479
+
+# net: bridge: mdb: restart port group walk after deletion
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98487
 CVE-2026-98487
+
+# net: openvswitch: conntrack: fix helper UAF due to extensions realloc
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98490
 CVE-2026-98490
+
+# net: openvswitch: conntrack: avoid modifying shared unconfirmed ct entry
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98491
 CVE-2026-98491
+
+# packet: use ubuf_info completion for TX_RING packets
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98503
 CVE-2026-98503
+
+# drm/nouveau: fix double-free in nvif_vmm_dtor
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98515
 CVE-2026-98515
+
+# rds: ib: Clear the sg list when mapping an MR fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98524
 CVE-2026-98524
+
+# llc: reserve device headroom for allocated frames
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98526
 CVE-2026-98526
+
+# ipv6: do not let ipv6_find_hdr() return an offset past the packet end
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98532
 CVE-2026-98532
+
+# sctp: discard the rest of the packet on a stale-cookie error
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98548
 CVE-2026-98548
+
+# nfp: hold IPsec RX state under the XArray lock
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98561
 CVE-2026-98561
+
+# net: xps: reject an out of range traffic class
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98567
 CVE-2026-98567
+
+# vxlan: use one headroom snapshot for neighbour replies
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98568
 CVE-2026-98568
+
+# net: ipv6: keep room for the mac header in dst_dev_overhead()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98570
 CVE-2026-98570
+
+# net: stmmac: clear stale buf->page after recycling on skb build failure
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98571
 CVE-2026-98571
+
+# bpf: Fix immediate JMP JEQ/JNE on MIPS32
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98572
 CVE-2026-98572
+
+# net: skbuff: fix pull-bound underflow in skb_checksum_setup_ipv6()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98573
 CVE-2026-98573
+
+# nfc: llcp: Fix race condition in accept_queue lifecycle
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98580
 CVE-2026-98580
+
+# sctp: hold asoc or transport before mod_timer() in timer handlers
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98586
 CVE-2026-98586
+
+# bpf, sockmap: Reject max_entries > INT_MAX in sock_map_alloc
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98588
 CVE-2026-98588
+
+# bpf: Reject pkt arguments in mutating subprogs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98589
 CVE-2026-98589
+
+# bpf: Fix bpf_sock context code generation
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98590
 CVE-2026-98590
+
+# bpf: Fix bounds check for skb-backed dynptrs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98591
 CVE-2026-98591
+
+# bpf: Reject non-negative offsets in stack_slot_obj_get_spi()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98599
 CVE-2026-98599
+
+# Bluetooth: btintel_pcie: validate device-supplied DMA indices
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98601
 CVE-2026-98601
+
+# drm/virtio: release the GEM object on virtio_gpu_vram_create() errors
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98606
 CVE-2026-98606
+
+# net: gue: reject invalid REMCSUM offsets
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98621
 CVE-2026-98621
+
+# netfilter: nfnetlink_queue: hold nfnl mutex in event notifier
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98624
 CVE-2026-98624
+
+# netfilter: flowtable: publish HW_DEAD after worker is done
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98625
 CVE-2026-98625
+
+# bpf: Restrict CO-RE poisoning to relocatable instructions
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98626
 CVE-2026-98626
+
+# Bluetooth: mgmt: Dequeue pending mesh_send_sync entries on cancel
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98632
 CVE-2026-98632
+
+# scsi: sd_zbc: Reject disks with too many zones
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98634
 CVE-2026-98634
+
+# scsi: block: Fix zones_cond out-of-bounds write on zone report
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98635
 CVE-2026-98635
+
+# bpf, arm64: set up the frame pointer for the exception callback
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98641
 CVE-2026-98641
+
+# bpf: Fix UAF due to concurrent consumption of ttrace lists in alloc_bulk
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98642
 CVE-2026-98642
+
+# KVM: s390: Fix race in _destroy_pages_crste()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98649
 CVE-2026-98649
+
+# KVM: s390: Properly handle NULL pointer in dat_cond_set_storage_key()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98651
 CVE-2026-98651
+
+# KVM: s390: Add missing srcu in kvm_s390_set_irq_state()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98652
 CVE-2026-98652
+
+# thunderbolt: Don't access a DP tunnel after its DPRX read was canceled
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98689
 CVE-2026-98689
+
+# wifi: mac80211: fix mesh fast xmit path deletion UAF
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98699
 CVE-2026-98699
+
+# wifi: mac80211: release mesh path quota on failed additions
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98701
 CVE-2026-98701
+
+# wifi: mac80211: reject invalid 320 MHz CSA bandwidth
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98702
 CVE-2026-98702
+
+# wifi: mac80211: keep fallback association elements alive
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98704
 CVE-2026-98704
+
+# wifi: mac80211: drain PS delivery work during station teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98706
 CVE-2026-98706
+
+# wifi: mac80211: shut down RX BA session timer on teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98707
 CVE-2026-98707
+
+# wifi: mac80211: keep paired old chanctx alive
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98708
 CVE-2026-98708
+
+# wifi: mac80211: count only matching reservations in reserved switch
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98709
 CVE-2026-98709
+
+# KVM: arm64: vgic: Take a refcount on IRQs referenced by last_lr_irq
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98712
 CVE-2026-98712
+
+# KVM: SEV: Nullify "have run CPUs" mask pointer when freeing it
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98719
 CVE-2026-98719
+
+# nvmet-auth: fix out-of-bounds write in nvmet_auth_challenge()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98725
 CVE-2026-98725
+
+# Bluetooth: btintel_pcie: reject oversized TX packets in send_frame()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98730
 CVE-2026-98730
+
+# Bluetooth: hci_core: Serialize fragmented ISO packet queueing
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98733
 CVE-2026-98733
+
+# Bluetooth: hci_core: Serialize SCO and ISO scheduling with teardown
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98734
 CVE-2026-98734
+
+# Bluetooth: hci_core: Serialize ACL scheduling with channel deletion
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98735
 CVE-2026-98735
+
+# Bluetooth: hci_sync: Fix inquiry cache use-after-free
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98737
 CVE-2026-98737
+
+# Bluetooth: Serialize SMP remote OOB data access
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98738
 CVE-2026-98738
+
+# Bluetooth: RFCOMM: Fix initial port reference race
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98739
 CVE-2026-98739
+
+# ALSA: ua101: reject mismatched capture/playback packet sizes
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98741
 CVE-2026-98741
+
+# ALSA: seq: Serialize compat port-info ioctls
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98742
 CVE-2026-98742
+
+# tty: port: fix tty_port_tty_vhangup() race
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98752
 CVE-2026-98752
+
+# tty: vcc: hold port lock when clearing tty pointer in vcc_cleanup
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98754
 CVE-2026-98754
+
+# usb: core: clear both ep_in and ep_out for non-ep0 control endpoints
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98763
 CVE-2026-98763
+
+# binderfs: fix UAF write in binder_add_device
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98776
 CVE-2026-98776
+
+# futex: Fix private hash use-after-free on resize
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98788
 CVE-2026-98788
+
+# netfilter: flowtable: generalize pending status bit
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98792
 CVE-2026-98792
+
+# ipvs: filter some flags received in the backup server
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98794
 CVE-2026-98794
+
+# net: cap skb->queue_mapping when the tx queue is picked
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98797
 CVE-2026-98797
+
+# bpf: Skip detached progs in trampoline images that are still in use
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98799
 CVE-2026-98799
+
+# bpf: Wait for an RCU tasks grace period before freeing trampoline progs
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98800
 CVE-2026-98800
+
+# net: stmmac: fix rx Scatter-Gather support
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98803
 CVE-2026-98803
+
+# net: page_pool: fix use-after-free in page_pool_recycle_ring_bulk()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98804
 CVE-2026-98804
+
+# tipc: prevent GCM nonce reuse on peer key changes
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98805
 CVE-2026-98805
+
+# bpf: Hold map BTF for the memory allocator destructor record
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98813
 CVE-2026-98813
+
+# wifi: cfg80211: preserve hidden-group beacon IE ownership
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98823
 CVE-2026-98823
+
+# wifi: mac80211: validate TX status rate metadata
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98824
 CVE-2026-98824
+
+# wifi: ath9k_htc: bound TX aggregation to MAX_TX_BUF_SIZE
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98827
 CVE-2026-98827
+
+# wifi: mac80211: drop oversized fragments to avoid extra_len overflow
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98829
 CVE-2026-98829
+
+# ALSA: line6: reject oversized playback packets
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98836
 CVE-2026-98836
+
+# ALSA: caiaq: unregister the input device when probe fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98837
 CVE-2026-98837
+
+# sctp: check RCV_SHUTDOWN after the sendmsg connect wait
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98846
 CVE-2026-98846
+
+# io_uring: fix task_work add use-after-free with SQPOLL
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98858
 CVE-2026-98858
+
+# fprobe: Use guard(rcu_sched_notrace) and check rcu_is_watching()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98861
 CVE-2026-98861
+
+# audit: fix exe mark UAF in kill_rules()
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98862
 CVE-2026-98862
+
+# KVM: x86: Re-pend GET_NESTED_STATE_PAGES if getting said pages fails
+# https://nvd.nist.gov/vuln/detail/CVE-2026-98863
 CVE-2026-98863
+
+# bpf: Mark bpf_refcount field as unique
+# https://nvd.nist.gov/vuln/detail/CVE-2026-100074
+CVE-2026-100074
