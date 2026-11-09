@@ -18,12 +18,24 @@
       print jobs;
     }')
 
+    # Bound jobs by the memory cap too, one B19_BUILD_JOB_MEMORY_KB per job, at least one job
+    # shellcheck source=/dev/null
+    . detect-memory
+    JOB_MEMORY_KB="${B19_BUILD_JOB_MEMORY_KB:-2097152}"
+    MEM_JOBS=$(( MEMTOTAL_KB / JOB_MEMORY_KB ))
+    (( MEM_JOBS >= 1 )) || MEM_JOBS=1
+    JOBS_LEVEL=info
+    JOBS_BOUND="$(_ "CPU")"
+    if (( MEM_JOBS < JOBS )); then
+      JOBS_LEVEL=warn
+      JOBS_BOUND="$(_ "memory")"
+    fi
+    b19-log "${JOBS_LEVEL}" "BUILD" "$(_p "Jobs: %s by CPU (%s CPUs, ratio %s), %s by memory (%s KB, %s KB per job), %s wins" "${JOBS}" "${CPU_COUNT}" "${RATIO}" "${MEM_JOBS}" "${MEMTOTAL_KB}" "${JOB_MEMORY_KB}" "${JOBS_BOUND}")"
+    (( MEM_JOBS >= JOBS )) || JOBS="${MEM_JOBS}"
+
     # Set MAKEFLAGS with calculated jobs
     MAKEFLAGS="-j${JOBS}"
     export MAKEFLAGS
-
-    # Logging the result (optional)
-    b19-log info "BUILD" "Using ${JOBS} jobs out of ${CPU_COUNT} CPUs with RATIO=${RATIO}"
 
     B19_FLAGS_PATH="/flags"
 

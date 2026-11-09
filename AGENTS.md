@@ -28,6 +28,8 @@ GCC toolchain base image used as builder stage for compiled-from-source projects
 
 `compile-gcc/pre/` and `compile-gcc/post/` hooks are `.i.` — all projects using a `compile-gcc` builder stage inherit: APT cacher detection, `setup-build` (CFLAGS/LDFLAGS probe + `MAKEFLAGS=-j{n}`), mold activation, sccache stats.
 
+`-j{n}` is the lower of `NUMPROCS × B19_BUILD_PROC_RATIO` and `MEMTOTAL_KB / B19_BUILD_JOB_MEMORY_KB` (2 GiB default, at least one job); `detect-memory` caps `MEMTOTAL_KB` by the cgroup limit, so a build under buildah `--memory` sizes itself to it. The jobs line logs at `warn` when memory wins.
+
 ## apt template
 
 `.container/base/deps/common.apt.deps.j2` is a Jinja2 template — `{{ ENV.B19_GCC_SERIES }}` substituted at build time by `minijinja-cli --env` (hook: `build.d/base/pre/200-setup-sources.sh`).

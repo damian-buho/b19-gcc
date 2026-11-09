@@ -4,9 +4,9 @@
 # SPDX-License-Identifier: MIT
 msgid ""
 msgstr ""
-"Project-Id-Version: gcc 1.2.0\n"
+"Project-Id-Version: gcc 0.8.21\n"
 "Report-Msgid-Bugs-To: https://github.com/damian-buho/b19-gcc/issues\n"
-"POT-Creation-Date: 2026-09-15 20:20+0000\n"
+"POT-Creation-Date: 2026-11-09 15:12+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -15,39 +15,53 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: .container/base/tools.d/setup-build:93
+#: .container/base/tools.d/setup-build:28
+msgid "CPU"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:31
+msgid "memory"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:33
+msgid ""
+"Jobs: %s by CPU (%s CPUs, ratio %s), %s by memory (%s KB, %s KB per job), %s "
+"wins"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:106
 msgid "sccache without a remote backend causes daemon races, switching to %s"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:98
+#: .container/base/tools.d/setup-build:111
 msgid "sccache binary cannot run on %s, switching to %s"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:113
+#: .container/base/tools.d/setup-build:126
 msgid "sccache local cache on tmpfs (%s), remote is persistent"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:116
+#: .container/base/tools.d/setup-build:129
 msgid "sccache local cache on cache mount (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:118
+#: .container/base/tools.d/setup-build:131
 msgid "Create sccache cache directory"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:124
+#: .container/base/tools.d/setup-build:137
 msgid "Create ccache cache directory"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:128
+#: .container/base/tools.d/setup-build:141
 msgid "Compile cache: ccache + remote (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:130
+#: .container/base/tools.d/setup-build:143
 msgid "Compile cache: ccache (%s)"
 msgstr ""
 
-#: .container/base/tools.d/setup-build:137
+#: .container/base/tools.d/setup-build:150
 msgid "Compile cache: %s"
 msgstr ""
 

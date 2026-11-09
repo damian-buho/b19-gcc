@@ -5,8 +5,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: b19-gcc\n"
-"Report-Msgid-Bugs-To: i18n@b19.dev\n"
-"POT-Creation-Date: 2026-05-02 16:15-0300\n"
+"Report-Msgid-Bugs-To: https://github.com/damian-buho/b19-gcc/issues\n"
+"POT-Creation-Date: 2026-11-09 15:12+0000\n"
 "PO-Revision-Date: 2026-03-22 00:00+0000\n"
 "Last-Translator: b19 team\n"
 "Language-Team: Spanish\n"
@@ -16,75 +16,119 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .container/base/tools.d/setup-build:72
-msgid "sccache without %s causes build races, falling back to ccache"
+#: .container/base/tools.d/setup-build:28
+msgid "CPU"
+msgstr "CPU"
+
+#: .container/base/tools.d/setup-build:31
+msgid "memory"
+msgstr "memoria"
+
+#: .container/base/tools.d/setup-build:33
+msgid ""
+"Jobs: %s by CPU (%s CPUs, ratio %s), %s by memory (%s KB, %s KB per job), %s "
+"wins"
+msgstr "Trabajos: %s por CPU (%s CPU, proporción %s), %s por memoria (%s KB, %s KB por trabajo), gana %s"
+
+#: .container/base/tools.d/setup-build:106
+#, fuzzy
+msgid "sccache without a remote backend causes daemon races, switching to %s"
 msgstr "sccache sin %s provoca conflictos de compilación, cambiando a ccache"
 
-#: .container/base/tools.d/setup-build:81
+#: .container/base/tools.d/setup-build:111
+msgid "sccache binary cannot run on %s, switching to %s"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:126
+msgid "sccache local cache on tmpfs (%s), remote is persistent"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:129
+msgid "sccache local cache on cache mount (%s)"
+msgstr ""
+
+#: .container/base/tools.d/setup-build:131
 msgid "Create sccache cache directory"
 msgstr "Crear directorio de caché sccache"
 
-#: .container/base/tools.d/setup-build:84
-msgid "Compile cache: sccache + Redis (%s)"
-msgstr "Caché de compilación: sccache + Redis (%s)"
-
-#: .container/base/tools.d/setup-build:89
+#: .container/base/tools.d/setup-build:137
 msgid "Create ccache cache directory"
 msgstr "Crear directorio de caché ccache"
 
-#: .container/base/tools.d/setup-build:95
-msgid "Compile cache: ccache + Redis (%s)"
+#: .container/base/tools.d/setup-build:141
+#, fuzzy
+msgid "Compile cache: ccache + remote (%s)"
 msgstr "Caché de compilación: ccache + Redis (%s)"
 
-#: .container/base/tools.d/setup-build:97
+#: .container/base/tools.d/setup-build:143
 msgid "Compile cache: ccache (%s)"
 msgstr "Caché de compilación: ccache (%s)"
 
-#: .container/base/tools.d/setup-build:104
+#: .container/base/tools.d/setup-build:150
 msgid "Compile cache: %s"
 msgstr "Caché de compilación: %s"
 
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:4
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:5
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:13
+msgid "Extract %s"
+msgstr "Extraer %s"
+
+#: .container/base/build.d/base/post/050-install-compile-cache.sh:19
+msgid "Install sccache"
+msgstr "Instalar sccache"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:11
+msgid "Set gcc-%s as default"
+msgstr "Establecer gcc-%s como predeterminado"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:23
+#, fuzzy
+msgid "Set cpp-%s as default"
+msgstr "Establecer gcc-%s como predeterminado"
+
+#: .container/base/build.d/base/post/100-install-gcc.sh:26
+msgid "GCC %s set as default"
+msgstr "GCC %s establecido como predeterminado"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:13
+msgid "Render %s"
+msgstr "Generar %s"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:16
+msgid "Remove %s"
+msgstr "Eliminar %s"
+
+#: .container/base/build.d/base/pre/200-setup-sources.sh:19
+msgid "GCC templates processed for series %s"
+msgstr "Plantillas GCC procesadas para la serie %s"
+
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:8
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:9
 msgid "stats: %s"
 msgstr "estadísticas: %s"
 
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:6
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:10
 msgid "Compile cache was disabled (%s), no stats"
 msgstr "Caché de compilación desactivada (%s), sin estadísticas"
 
-#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:7
+#: .container/base/build.d/compile-gcc/post/900-show-cache-stats.i.sh:11
 #, fuzzy
 msgid "Unknown compile cache mode: %s"
 msgstr "Caché de compilación: %s"
 
-#: .container/base/build.d/base/post/100-install-gcc.sh:7
-msgid "Set gcc-%s as default"
-msgstr "Establecer gcc-%s como predeterminado"
+#: .container/user/test.d/1300-compile-test.sh:20
+msgid "gcc-%s compile test passed"
+msgstr ""
 
-#: .container/base/build.d/base/post/100-install-gcc.sh:12
-msgid "GCC %s set as default"
-msgstr "GCC %s establecido como predeterminado"
+#: .container/user/test.d/1300-compile-test.sh:27
+msgid "g++-%s compile test passed"
+msgstr ""
 
-#: .container/base/build.d/base/post/050-install-compile-cache.sh:9
-msgid "Extract %s"
-msgstr "Extraer %s"
+#: .container/user/test.d/1300-compile-test.sh:41
+msgid "cmake %s + ninja %s build test passed"
+msgstr ""
 
-#: .container/base/build.d/base/post/050-install-compile-cache.sh:15
-msgid "Install sccache"
-msgstr "Instalar sccache"
-
-#: .container/base/build.d/base/pre/200-setup-sources.sh:9
-msgid "Render %s"
-msgstr "Generar %s"
-
-#: .container/base/build.d/base/pre/200-setup-sources.sh:12
-msgid "Remove %s"
-msgstr "Eliminar %s"
-
-#: .container/base/build.d/base/pre/200-setup-sources.sh:15
-msgid "GCC templates processed for series %s"
-msgstr "Plantillas GCC procesadas para la serie %s"
+#~ msgid "Compile cache: sccache + Redis (%s)"
+#~ msgstr "Caché de compilación: sccache + Redis (%s)"
 
 #~ msgid "Configure"
 #~ msgstr "Configurar"
