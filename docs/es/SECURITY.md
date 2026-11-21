@@ -409,6 +409,8 @@ aplica a este proyecto):
 | [CVE-2026-99306](https://nvd.nist.gov/vuln/detail/CVE-2026-99306) | unfixable kernel headers in linux-libc-dev (no fix published) |
 | [CVE-2026-99310](https://nvd.nist.gov/vuln/detail/CVE-2026-99310) | unfixable kernel headers in linux-libc-dev (no fix published) |
 | [CVE-2026-99311](https://nvd.nist.gov/vuln/detail/CVE-2026-99311) | unfixable kernel headers in linux-libc-dev (no fix published) |
+| [CVE-2026-99312](https://nvd.nist.gov/vuln/detail/CVE-2026-99312) | unfixable kernel headers in linux-libc-dev (no fix published) |
+| [CVE-2026-99317](https://nvd.nist.gov/vuln/detail/CVE-2026-99317) | unfixable kernel headers in linux-libc-dev (no fix published) |
 | [CVE-2026-100074](https://nvd.nist.gov/vuln/detail/CVE-2026-100074) | unfixable kernel headers in linux-libc-dev (no fix published) |
 | [CVE-2026-100081](https://nvd.nist.gov/vuln/detail/CVE-2026-100081) | unfixable kernel headers in linux-libc-dev (no fix published) |
 
